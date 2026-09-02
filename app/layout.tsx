@@ -13,8 +13,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Obsidian Universe — Explore the plugin ecosystem",
-  description: "A visual, semantic map of the Obsidian community plugin ecosystem.",
+  title: "Obsidian Universe — Map every community plugin",
+  description: "Explore 7,210 Obsidian community plugins as a searchable semantic universe of real tools, regions, and nearest neighbors.",
   icons: {
     icon: "/favicon.svg",
     shortcut: "/favicon.svg",

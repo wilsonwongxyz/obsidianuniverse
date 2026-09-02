@@ -1,112 +1,283 @@
 "use client";
 
-import { useEffect, useMemo, useRef, useState } from "react";
+import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 
-type Plugin = { id: string; name: string; cluster: string; x: number; y: number; size: number; downloads: string; author: string; description: string; related: string[] };
+type Neighbor = [string, number];
+type Plugin = {
+  id: string; name: string; author: string; description: string; repo: string;
+  downloads: number; updated: number; x: number; y: number; cluster: number; neighbors: Neighbor[];
+};
+type Cluster = { id: number; name: string; color: string; x: number; y: number; count: number };
+type MapData = { version: number; generatedAt: string; source: string; method: string; count: number; clusters: Cluster[]; plugins: Plugin[] };
+type Camera = { x: number; y: number; k: number };
 
-const colors: Record<string, string> = { Knowledge: "#a8bff6", Automation: "#f3bf77", "Visual Thinking": "#f097a9", Tasks: "#95d6b4", Writing: "#c9abef", Research: "#70c9d1", Publishing: "#e7d46f" };
+const WORLD = { width: 2400, height: 1600 };
+const INITIAL_CAMERA: Camera = { x: 0, y: 0, k: .45 };
 
-const plugins: Plugin[] = [
-  { id: "dataview", name: "Dataview", cluster: "Knowledge", x: 43, y: 45, size: 26, downloads: "8.4M", author: "Michael Brenan", description: "Treat your Obsidian vault as a database and query your notes as live data.", related: ["Metadata Menu", "DB Folder", "Projects", "Templater"] },
-  { id: "metadata-menu", name: "Metadata Menu", cluster: "Knowledge", x: 34, y: 39, size: 15, downloads: "1.2M", author: "MDelobelle", description: "Manage and edit structured metadata across your vault.", related: ["Dataview", "DB Folder", "Projects"] },
-  { id: "db-folder", name: "DB Folder", cluster: "Knowledge", x: 39, y: 32, size: 13, downloads: "620K", author: "Rafael G.", description: "Display and edit folder notes in a database-style table.", related: ["Dataview", "Metadata Menu"] },
-  { id: "projects", name: "Projects", cluster: "Knowledge", x: 49, y: 36, size: 15, downloads: "940K", author: "Marcus Olsson", description: "Project management views powered by notes and properties.", related: ["Dataview", "Tasks"] },
-  { id: "bases", name: "Bases", cluster: "Knowledge", x: 31, y: 49, size: 12, downloads: "420K", author: "Various", description: "Extend Obsidian Bases with useful views and formulas.", related: ["Dataview", "Metadata Menu"] },
-  { id: "templater", name: "Templater", cluster: "Automation", x: 58, y: 44, size: 24, downloads: "6.7M", author: "SilentVoid", description: "Create dynamic templates with variables, functions, and scripts.", related: ["QuickAdd", "Commander", "Dataview", "Meta Bind"] },
-  { id: "quickadd", name: "QuickAdd", cluster: "Automation", x: 66, y: 38, size: 20, downloads: "3.1M", author: "Christian B. B. Houmann", description: "Capture, template, and automate common actions from one command.", related: ["Templater", "Commander", "Buttons"] },
-  { id: "commander", name: "Commander", cluster: "Automation", x: 70, y: 50, size: 14, downloads: "1.4M", author: "phibr0", description: "Add commands anywhere in the Obsidian interface.", related: ["QuickAdd", "Templater"] },
-  { id: "meta-bind", name: "Meta Bind", cluster: "Automation", x: 55, y: 55, size: 16, downloads: "1.1M", author: "mProjectsCode", description: "Create interactive controls that bind directly to note metadata.", related: ["Dataview", "Templater", "Buttons"] },
-  { id: "buttons", name: "Buttons", cluster: "Automation", x: 64, y: 58, size: 11, downloads: "820K", author: "shabegom", description: "Place configurable action buttons inside notes.", related: ["Meta Bind", "QuickAdd"] },
-  { id: "excalidraw", name: "Excalidraw", cluster: "Visual Thinking", x: 22, y: 67, size: 26, downloads: "5.9M", author: "Zsolt Viczian", description: "Sketch, diagram, and think visually inside your vault.", related: ["Canvas Mindmap", "Advanced Canvas", "Image Toolkit"] },
-  { id: "advanced-canvas", name: "Advanced Canvas", cluster: "Visual Thinking", x: 31, y: 73, size: 16, downloads: "1.3M", author: "Developer", description: "Add presentation and workflow features to Obsidian Canvas.", related: ["Excalidraw", "Canvas Mindmap"] },
-  { id: "canvas-mindmap", name: "Canvas Mindmap", cluster: "Visual Thinking", x: 17, y: 77, size: 13, downloads: "690K", author: "Quorafind", description: "Create mind maps quickly on the native canvas.", related: ["Excalidraw", "Advanced Canvas"] },
-  { id: "tasks", name: "Tasks", cluster: "Tasks", x: 78, y: 68, size: 24, downloads: "5.2M", author: "Obsidian Tasks Team", description: "Track tasks across your entire vault with powerful queries.", related: ["Kanban", "Day Planner", "Projects"] },
-  { id: "kanban", name: "Kanban", cluster: "Tasks", x: 86, y: 61, size: 20, downloads: "4.4M", author: "mgmeyers", description: "Create markdown-backed Kanban boards.", related: ["Tasks", "Projects"] },
-  { id: "day-planner", name: "Day Planner", cluster: "Tasks", x: 88, y: 75, size: 15, downloads: "1.7M", author: "Ivan Lednev", description: "Plan a day on a visual timeline from markdown tasks.", related: ["Tasks", "Calendar"] },
-  { id: "longform", name: "Longform", cluster: "Writing", x: 55, y: 80, size: 16, downloads: "780K", author: "Kevin Barrett", description: "Draft and organize novels, essays, and other long-form projects.", related: ["Writing Goals", "Typewriter Scroll"] },
-  { id: "writing-goals", name: "Writing Goals", cluster: "Writing", x: 47, y: 87, size: 12, downloads: "330K", author: "Developer", description: "Set and visualize word-count goals for your writing.", related: ["Longform"] },
-  { id: "typewriter", name: "Typewriter Scroll", cluster: "Writing", x: 65, y: 88, size: 11, downloads: "510K", author: "Developer", description: "Keep the active line centered for distraction-free writing.", related: ["Longform"] },
-  { id: "zotero", name: "Zotero Integration", cluster: "Research", x: 18, y: 26, size: 20, downloads: "2.1M", author: "mgmeyers", description: "Import citations, notes, and annotations from Zotero.", related: ["Citations", "PDF++", "Annotator"] },
-  { id: "pdf-plus", name: "PDF++", cluster: "Research", x: 25, y: 18, size: 17, downloads: "1.0M", author: "RyotaUshio", description: "Deep PDF annotation and linked reference workflows.", related: ["Zotero Integration", "Annotator"] },
-  { id: "citations", name: "Citations", cluster: "Research", x: 10, y: 19, size: 14, downloads: "1.5M", author: "Jon Gauthier", description: "Search and insert references from a citation library.", related: ["Zotero Integration"] },
-  { id: "digital-garden", name: "Digital Garden", cluster: "Publishing", x: 77, y: 18, size: 18, downloads: "1.3M", author: "Ole Eskild Dahl", description: "Publish selected notes as a connected digital garden.", related: ["Quartz Sync", "Hugo Publish"] },
-  { id: "quartz", name: "Quartz Sync", cluster: "Publishing", x: 87, y: 25, size: 14, downloads: "620K", author: "Developer", description: "Prepare and sync a vault for publishing with Quartz.", related: ["Digital Garden", "Hugo Publish"] },
-  { id: "hugo", name: "Hugo Publish", cluster: "Publishing", x: 69, y: 10, size: 11, downloads: "280K", author: "Developer", description: "Publish vault content to a Hugo website.", related: ["Digital Garden", "Quartz Sync"] },
-];
+function formatDownloads(value: number) {
+  if (value >= 1_000_000) return `${(value / 1_000_000).toFixed(value >= 10_000_000 ? 0 : 1)}M`;
+  if (value >= 1_000) return `${(value / 1_000).toFixed(value >= 100_000 ? 0 : 1)}K`;
+  return value.toLocaleString();
+}
 
-const clusterLabels = [["RESEARCH", 15, 9], ["KNOWLEDGE", 39, 23], ["PUBLISHING", 78, 7], ["AUTOMATION", 63, 30], ["VISUAL THINKING", 16, 60], ["TASKS", 84, 54], ["WRITING", 55, 72]] as const;
+function updatedLabel(value: number) {
+  if (!value) return "Unknown";
+  return new Intl.DateTimeFormat("en", { month: "short", day: "numeric", year: "numeric" }).format(new Date(value));
+}
+
+function worldPoint(plugin: Pick<Plugin, "x" | "y">) {
+  return { x: plugin.x / 100 * WORLD.width, y: plugin.y / 100 * WORLD.height };
+}
 
 export default function UniverseMap() {
-  const [selectedId, setSelectedId] = useState("dataview");
+  const [data, setData] = useState<MapData | null>(null);
+  const [error, setError] = useState("");
   const [query, setQuery] = useState("");
-  const [zoom, setZoom] = useState(1);
-  const [pan, setPan] = useState({ x: 0, y: 0 });
-  const drag = useRef<{ x: number; y: number; panX: number; panY: number } | null>(null);
+  const [selectedId, setSelectedId] = useState("");
+  const [hoveredId, setHoveredId] = useState("");
+  const [activeCluster, setActiveCluster] = useState<number | null>(null);
+  const [camera, setCamera] = useState<Camera>(INITIAL_CAMERA);
+  const [aboutOpen, setAboutOpen] = useState(false);
+  const [viewportSize, setViewportSize] = useState({ width: 1200, height: 800 });
+  const canvas = useRef<HTMLCanvasElement>(null);
+  const viewport = useRef<HTMLElement>(null);
   const search = useRef<HTMLInputElement>(null);
-  const selected = plugins.find((plugin) => plugin.id === selectedId) ?? plugins[0];
-  const matches = useMemo(() => query.trim() ? plugins.filter((p) => `${p.name} ${p.cluster} ${p.description}`.toLowerCase().includes(query.toLowerCase())).slice(0, 6) : [], [query]);
-  function choose(plugin: Plugin) { setSelectedId(plugin.id); setQuery(""); }
+  const drag = useRef<{ x: number; y: number; cameraX: number; cameraY: number; moved: boolean } | null>(null);
+  const size = useRef({ width: 1200, height: 800 });
 
   useEffect(() => {
-    function focusSearch(event: KeyboardEvent) {
-      if ((event.metaKey || event.ctrlKey) && event.key.toLowerCase() === "k") {
-        event.preventDefault();
-        search.current?.focus();
-      }
-    }
-    window.addEventListener("keydown", focusSearch);
-    return () => window.removeEventListener("keydown", focusSearch);
+    let cancelled = false;
+    fetch("/map-v1.json")
+      .then((response) => { if (!response.ok) throw new Error("The map data could not be loaded."); return response.json(); })
+      .then((payload: MapData) => {
+        if (cancelled) return;
+        setData(payload);
+        const initial = location.hash.slice(1);
+        if (payload.plugins.some((plugin) => plugin.id === initial)) setSelectedId(initial);
+      })
+      .catch((reason: Error) => !cancelled && setError(reason.message));
+    return () => { cancelled = true; };
+  }, []);
+
+  const pluginById = useMemo(() => new Map(data?.plugins.map((plugin) => [plugin.id, plugin]) ?? []), [data]);
+  const clusterById = useMemo(() => new Map(data?.clusters.map((cluster) => [cluster.id, cluster]) ?? []), [data]);
+  const selected = selectedId ? pluginById.get(selectedId) : undefined;
+  const hovered = hoveredId ? pluginById.get(hoveredId) : undefined;
+
+  const matches = useMemo(() => {
+    const value = query.trim().toLowerCase();
+    if (!value || !data) return [];
+    return data.plugins
+      .filter((plugin) => `${plugin.name} ${plugin.author} ${plugin.description} ${clusterById.get(plugin.cluster)?.name}`.toLowerCase().includes(value))
+      .sort((a, b) => b.downloads - a.downloads)
+      .slice(0, 8);
+  }, [clusterById, data, query]);
+
+  const fitCamera = useCallback(() => {
+    const { width, height } = size.current;
+    const k = Math.min(width / WORLD.width, height / WORLD.height) * .92;
+    setCamera({ x: (width - WORLD.width * k) / 2, y: (height - WORLD.height * k) / 2, k });
   }, []);
 
   useEffect(() => {
+    const element = viewport.current;
+    if (!element) return;
+    const observer = new ResizeObserver(([entry]) => {
+      const width = entry.contentRect.width;
+      const height = entry.contentRect.height;
+      setViewportSize({ width, height });
+      const pixelRatio = Math.min(devicePixelRatio || 1, 2);
+      size.current = { width, height };
+      if (canvas.current) {
+        canvas.current.width = Math.round(width * pixelRatio);
+        canvas.current.height = Math.round(height * pixelRatio);
+        canvas.current.style.width = `${width}px`;
+        canvas.current.style.height = `${height}px`;
+      }
+      setCamera((current) => current === INITIAL_CAMERA ? { x: (width - WORLD.width * Math.min(width / WORLD.width, height / WORLD.height) * .92) / 2, y: (height - WORLD.height * Math.min(width / WORLD.width, height / WORLD.height) * .92) / 2, k: Math.min(width / WORLD.width, height / WORLD.height) * .92 } : { ...current });
+    });
+    observer.observe(element);
+    return () => observer.disconnect();
+  }, []);
+
+  const draw = useCallback(() => {
+    const element = canvas.current;
+    if (!element || !data) return;
+    const ctx = element.getContext("2d");
+    if (!ctx) return;
+    const ratio = element.width / Math.max(size.current.width, 1);
+    const { width, height } = size.current;
+    ctx.setTransform(ratio, 0, 0, ratio, 0, 0);
+    ctx.clearRect(0, 0, width, height);
+
+    ctx.save();
+    ctx.translate(camera.x, camera.y);
+    ctx.scale(camera.k, camera.k);
+    for (const cluster of data.clusters) {
+      const point = { x: cluster.x / 100 * WORLD.width, y: cluster.y / 100 * WORLD.height };
+      const alpha = activeCluster === null || activeCluster === cluster.id ? .17 : .035;
+      ctx.fillStyle = cluster.color;
+      ctx.globalAlpha = alpha;
+      ctx.font = `600 ${Math.max(22, 30 / camera.k)}px Georgia, serif`;
+      ctx.textAlign = "center";
+      ctx.letterSpacing = "3px";
+      ctx.fillText(cluster.name.toUpperCase(), point.x, point.y - 34 / camera.k);
+    }
+
+    for (const plugin of data.plugins) {
+      const point = worldPoint(plugin);
+      const sx = point.x * camera.k + camera.x;
+      const sy = point.y * camera.k + camera.y;
+      if (sx < -20 || sy < -20 || sx > width + 20 || sy > height + 20) continue;
+      const cluster = clusterById.get(plugin.cluster);
+      const dimmed = activeCluster !== null && activeCluster !== plugin.cluster;
+      const radius = 2 + Math.log10(plugin.downloads + 10) * .8;
+      ctx.globalAlpha = dimmed ? .07 : .78;
+      ctx.beginPath();
+      ctx.arc(point.x, point.y, radius / camera.k, 0, Math.PI * 2);
+      ctx.fillStyle = cluster?.color ?? "#93a2b8";
+      ctx.fill();
+    }
+
+    if (selected) {
+      const source = worldPoint(selected);
+      for (const [neighborId, score] of selected.neighbors) {
+        const neighbor = pluginById.get(neighborId);
+        if (!neighbor) continue;
+        const target = worldPoint(neighbor);
+        ctx.globalAlpha = Math.max(.16, score * .55);
+        ctx.strokeStyle = clusterById.get(neighbor.cluster)?.color ?? "#aab6c7";
+        ctx.lineWidth = 1.2 / camera.k;
+        ctx.beginPath(); ctx.moveTo(source.x, source.y); ctx.lineTo(target.x, target.y); ctx.stroke();
+      }
+    }
+
+    const labels: Plugin[] = [];
+    for (const plugin of data.plugins) {
+      const point = worldPoint(plugin);
+      const sx = point.x * camera.k + camera.x;
+      const sy = point.y * camera.k + camera.y;
+      if (sx < -80 || sy < -30 || sx > width + 80 || sy > height + 30) continue;
+      if (plugin.id === selectedId || plugin.id === hoveredId || (camera.k > .7 && plugin.downloads > 350_000) || (camera.k > 1.25 && plugin.downloads > 25_000) || camera.k > 2.2) labels.push(plugin);
+    }
+    labels.sort((a, b) => a.downloads - b.downloads);
+    for (const plugin of labels) {
+      const point = worldPoint(plugin);
+      const isFocus = plugin.id === selectedId || plugin.id === hoveredId;
+      const radius = 2 + Math.log10(plugin.downloads + 10) * .8;
+      ctx.globalAlpha = activeCluster !== null && activeCluster !== plugin.cluster ? .12 : 1;
+      ctx.fillStyle = isFocus ? "#ffffff" : "#c7d0de";
+      ctx.font = `${isFocus ? 700 : 500} ${Math.max(11, (isFocus ? 14 : 12) / camera.k)}px Arial, sans-serif`;
+      ctx.textAlign = "center";
+      ctx.fillText(plugin.name, point.x, point.y + (radius + 14) / camera.k);
+      if (isFocus) {
+        ctx.strokeStyle = "#ffffff"; ctx.lineWidth = 1.5 / camera.k; ctx.globalAlpha = .9;
+        ctx.beginPath(); ctx.arc(point.x, point.y, (radius + 6) / camera.k, 0, Math.PI * 2); ctx.stroke();
+      }
+    }
+    ctx.restore();
+  }, [activeCluster, camera, clusterById, data, hoveredId, pluginById, selected, selectedId]);
+
+  useEffect(() => { const frame = requestAnimationFrame(draw); return () => cancelAnimationFrame(frame); }, [draw]);
+
+  function selectPlugin(plugin: Plugin, navigate = true) {
+    setSelectedId(plugin.id);
+    setActiveCluster(null);
+    setQuery("");
+    history.replaceState(null, "", `#${plugin.id}`);
+    if (navigate) {
+      const point = worldPoint(plugin);
+      const k = 2.1;
+      setCamera({ x: size.current.width / 2 - point.x * k, y: size.current.height / 2 - point.y * k, k });
+    }
+  }
+
+  useEffect(() => {
+    function onKey(event: KeyboardEvent) {
+      if ((event.metaKey || event.ctrlKey) && event.key.toLowerCase() === "k") { event.preventDefault(); search.current?.focus(); }
+      if (event.key === "Escape") { setQuery(""); setActiveCluster(null); }
+    }
+    window.addEventListener("keydown", onKey);
+    return () => window.removeEventListener("keydown", onKey);
+  }, []);
+
+  useEffect(() => {
+    if (!data) return;
     const modelContext = (document as unknown as { modelContext?: { registerTool?: (tool: object, options?: { signal: AbortSignal }) => void | Promise<void> } }).modelContext;
     if (!modelContext?.registerTool) return;
     const lifecycle = new AbortController();
     void Promise.resolve(modelContext.registerTool({
-      name: "select_plugin",
-      title: "Select an Obsidian plugin",
-      description: "Navigate the visible universe map to a plugin and open its details.",
-      inputSchema: {
-        type: "object",
-        properties: { plugin: { type: "string", description: "Plugin name or ID." } },
-        required: ["plugin"],
-        additionalProperties: false,
-      },
+      name: "select_plugin", title: "Select an Obsidian plugin",
+      description: "Find a plugin by name or ID, navigate the universe map to it, and open its real details.",
+      inputSchema: { type: "object", properties: { plugin: { type: "string" } }, required: ["plugin"], additionalProperties: false },
       annotations: { readOnlyHint: false, untrustedContentHint: false },
       execute(input: unknown) {
-        const value = typeof input === "object" && input !== null && "plugin" in input ? String((input as { plugin: unknown }).plugin) : "";
-        const plugin = plugins.find((item) => item.id.toLowerCase() === value.toLowerCase() || item.name.toLowerCase() === value.toLowerCase());
+        const value = typeof input === "object" && input !== null && "plugin" in input ? String((input as { plugin: unknown }).plugin).toLowerCase() : "";
+        const plugin = data.plugins.find((item) => item.id.toLowerCase() === value || item.name.toLowerCase() === value);
         if (!plugin) throw new Error(`Plugin not found: ${value}`);
-        setSelectedId(plugin.id);
-        setQuery("");
-        return { id: plugin.id, name: plugin.name, cluster: plugin.cluster };
+        selectPlugin(plugin);
+        return { id: plugin.id, name: plugin.name, cluster: clusterById.get(plugin.cluster)?.name };
       },
     }, { signal: lifecycle.signal })).catch(() => undefined);
     return () => lifecycle.abort();
-  }, []);
+  }, [clusterById, data]);
 
-  return <main className="universe-shell">
+  function pointerToWorld(event: React.PointerEvent<HTMLCanvasElement>) {
+    const bounds = event.currentTarget.getBoundingClientRect();
+    return { x: (event.clientX - bounds.left - camera.x) / camera.k, y: (event.clientY - bounds.top - camera.y) / camera.k };
+  }
+
+  function findPlugin(point: { x: number; y: number }) {
+    if (!data) return undefined;
+    let nearest: Plugin | undefined;
+    let best = 16 / camera.k;
+    for (const plugin of data.plugins) {
+      if (activeCluster !== null && activeCluster !== plugin.cluster) continue;
+      const candidate = worldPoint(plugin);
+      const distance = Math.hypot(candidate.x - point.x, candidate.y - point.y);
+      if (distance < best) { best = distance; nearest = plugin; }
+    }
+    return nearest;
+  }
+
+  return <main className="universe-shell actual-map">
     <header className="topbar">
-      <div className="brand"><span className="brand-mark">O</span><div><strong>Obsidian Universe</strong><small>7,187 community plugins</small></div></div>
-      <div className="search-wrap"><span aria-hidden="true">⌕</span><input ref={search} aria-label="Search plugins" value={query} onChange={(event) => setQuery(event.target.value)} placeholder="Search plugins, capabilities, authors…" /><kbd>⌘ K</kbd>
-        {matches.length > 0 && <div className="search-results">{matches.map((plugin) => <button key={plugin.id} onClick={() => choose(plugin)}><i style={{background: colors[plugin.cluster]}} /><span>{plugin.name}<small>{plugin.cluster}</small></span></button>)}</div>}
+      <button className="brand brand-button" onClick={fitCamera} aria-label="Fit the whole plugin universe"><span className="brand-mark">O</span><span><strong>Obsidian Universe</strong><small>{data ? `${data.count.toLocaleString()} community plugins` : "Loading the ecosystem"}</small></span></button>
+      <div className="search-wrap"><span aria-hidden="true">⌕</span><input ref={search} aria-label="Search every community plugin" value={query} onChange={(event) => setQuery(event.target.value)} placeholder="Search plugins, capabilities, authors…" /><kbd>⌘ K</kbd>
+        {query && <div className="search-results">{matches.length ? matches.map((plugin) => <button key={plugin.id} onClick={() => selectPlugin(plugin)}><i style={{ background: clusterById.get(plugin.cluster)?.color }} /><span>{plugin.name}<small>{clusterById.get(plugin.cluster)?.name} · {formatDownloads(plugin.downloads)} downloads</small></span></button>) : <p>No plugins found.</p>}</div>}
       </div>
-      <div className="header-actions"><button className="icon-button" aria-label="Information">i</button><button className="about-button">About the map</button></div>
+      <div className="header-actions"><span className="data-freshness">Updated {data ? new Date(data.generatedAt).toLocaleDateString() : "—"}</span><button className="about-button" onClick={() => setAboutOpen(true)}>How it works</button></div>
     </header>
-    <section className="map-viewport" aria-label="Interactive plugin map"
-      onWheel={(event) => { event.preventDefault(); setZoom((value) => Math.max(.72, Math.min(1.55, value - event.deltaY * .001))); }}
-      onPointerDown={(event) => { if ((event.target as HTMLElement).closest("button")) return; drag.current = { x: event.clientX, y: event.clientY, panX: pan.x, panY: pan.y }; event.currentTarget.setPointerCapture(event.pointerId); }}
-      onPointerMove={(event) => { if (!drag.current) return; setPan({ x: drag.current.panX + event.clientX - drag.current.x, y: drag.current.panY + event.clientY - drag.current.y }); }}
-      onPointerUp={(event) => { drag.current = null; event.currentTarget.releasePointerCapture(event.pointerId); }}>
-      <div className="starfield" /><div className="map-world" style={{transform: `translate(${pan.x}px, ${pan.y}px) scale(${zoom})`}}>
-      {clusterLabels.map(([label, x, y]) => <div key={label} className="cluster-label" style={{left: `${x}%`, top: `${y}%`}}>{label}</div>)}
-      {plugins.map((plugin) => <button key={plugin.id} className={`plugin-node ${selected.id === plugin.id ? "selected" : ""}`} style={{left: `${plugin.x}%`, top: `${plugin.y}%`, "--node-color": colors[plugin.cluster], "--node-size": `${plugin.size}px`} as React.CSSProperties} onClick={() => choose(plugin)} aria-label={`${plugin.name}, ${plugin.cluster}`}><span className="node-dot" /><span className="node-name">{plugin.name}</span></button>)}
-    </div><div className="map-hint">SCROLL TO ZOOM · DRAG TO EXPLORE</div><div className="zoom-control"><button aria-label="Zoom in" onClick={() => setZoom((z) => Math.min(1.55, z + .1))}>+</button><span>{Math.round(zoom * 100)}%</span><button aria-label="Zoom out" onClick={() => setZoom((z) => Math.max(.72, z - .1))}>−</button></div><div className="legend"><span>REGIONS</span>{Object.entries(colors).map(([label, color]) => <span className="legend-item" key={label}><i style={{background: color}} />{label}</span>)}</div></section>
-    <aside className="detail-panel"><div className="eyebrow"><i style={{background: colors[selected.cluster]}} />{selected.cluster}</div><h1>{selected.name}</h1><p className="description">{selected.description}</p>
-      <div className="stats"><div><strong>{selected.downloads}</strong><span>DOWNLOADS</span></div><div><strong>★ 8.2K</strong><span>GITHUB STARS</span></div><div><strong>12d</strong><span>UPDATED</span></div></div>
-      <div className="author"><span className="avatar">{selected.author[0]}</span><div><small>CREATED BY</small><strong>{selected.author}</strong></div></div><hr /><div className="section-title"><span>NEARBY IN THE UNIVERSE</span><small>SEMANTIC DISTANCE</small></div>
-      <div className="related-list">{selected.related.map((name, index) => { const plugin = plugins.find((p) => p.name === name); return <button key={name} onClick={() => plugin && choose(plugin)}><span className="related-index">0{index + 1}</span><i style={{background: plugin ? colors[plugin.cluster] : "#70809a"}} /><span>{name}<small>{plugin?.cluster ?? "Related tool"}</small></span><em>{94 - index * 7}%</em></button>})}</div>
-      <div className="panel-actions"><a href={`https://github.com/search?q=obsidian+${encodeURIComponent(selected.name)}`} target="_blank" rel="noreferrer">View on GitHub ↗</a><button>Community page ↗</button></div>
+
+    <section ref={viewport} className="map-viewport canvas-map" aria-label="Semantic map of all Obsidian community plugins">
+      <canvas ref={canvas}
+        onWheel={(event) => { event.preventDefault(); const bounds = event.currentTarget.getBoundingClientRect(); const px = event.clientX - bounds.left; const py = event.clientY - bounds.top; const nextK = Math.max(.22, Math.min(5, camera.k * Math.exp(-event.deltaY * .0012))); const wx = (px - camera.x) / camera.k; const wy = (py - camera.y) / camera.k; setCamera({ x: px - wx * nextK, y: py - wy * nextK, k: nextK }); }}
+        onPointerDown={(event) => { drag.current = { x: event.clientX, y: event.clientY, cameraX: camera.x, cameraY: camera.y, moved: false }; event.currentTarget.setPointerCapture(event.pointerId); }}
+        onPointerMove={(event) => { if (drag.current) { const dx = event.clientX - drag.current.x; const dy = event.clientY - drag.current.y; if (Math.abs(dx) + Math.abs(dy) > 3) drag.current.moved = true; setCamera((current) => ({ ...current, x: drag.current!.cameraX + dx, y: drag.current!.cameraY + dy })); return; } const plugin = findPlugin(pointerToWorld(event)); setHoveredId(plugin?.id ?? ""); }}
+        onPointerUp={(event) => { const state = drag.current; drag.current = null; event.currentTarget.releasePointerCapture(event.pointerId); if (state && !state.moved) { const plugin = findPlugin(pointerToWorld(event)); if (plugin) selectPlugin(plugin, false); } }}
+        onPointerLeave={() => setHoveredId("")}
+      />
+      {!data && !error && <div className="map-status"><span className="loading-orbit" />Building the universe…</div>}
+      {error && <div className="map-status error-state"><strong>Map unavailable</strong><span>{error}</span><button onClick={() => location.reload()}>Try again</button></div>}
+      {hovered && <div className="hover-card" style={{ left: Math.min(viewportSize.width - 230, worldPoint(hovered).x * camera.k + camera.x + 14), top: Math.max(76, worldPoint(hovered).y * camera.k + camera.y - 18) }}><strong>{hovered.name}</strong><span>{clusterById.get(hovered.cluster)?.name}</span></div>}
+      <div className="map-hint">SCROLL TO ZOOM · DRAG TO EXPLORE · CLICK A PLUGIN</div>
+      <div className="zoom-control"><button aria-label="Zoom in" onClick={() => setCamera((value) => ({ ...value, k: Math.min(5, value.k * 1.25) }))}>+</button><span>{Math.round(camera.k * 100)}%</span><button aria-label="Zoom out" onClick={() => setCamera((value) => ({ ...value, k: Math.max(.22, value.k / 1.25) }))}>−</button><button aria-label="Fit map" onClick={fitCamera}>⌂</button></div>
+      <div className="legend cluster-filter"><span>REGIONS</span><button className={activeCluster === null ? "active" : ""} onClick={() => setActiveCluster(null)}>All</button>{data?.clusters.map((cluster) => <button className={activeCluster === cluster.id ? "active" : ""} key={cluster.id} onClick={() => setActiveCluster(activeCluster === cluster.id ? null : cluster.id)}><i style={{ background: cluster.color }} />{cluster.name}<small>{cluster.count}</small></button>)}</div>
+    </section>
+
+    <aside className={`detail-panel ${selected ? "has-selection" : ""}`}>
+      {selected ? <>
+        <button className="close-panel" aria-label="Close plugin details" onClick={() => { setSelectedId(""); history.replaceState(null, "", location.pathname); }}>×</button>
+        <div className="eyebrow"><i style={{ background: clusterById.get(selected.cluster)?.color }} />{clusterById.get(selected.cluster)?.name}</div>
+        <h1>{selected.name}</h1><p className="description">{selected.description}</p>
+        <div className="stats"><div><strong>{formatDownloads(selected.downloads)}</strong><span>DOWNLOADS</span></div><div><strong>{selected.neighbors.length}</strong><span>CLOSE NEIGHBORS</span></div><div><strong>{updatedLabel(selected.updated)}</strong><span>LAST UPDATED</span></div></div>
+        <div className="author"><span className="avatar">{selected.author.slice(0, 1).toUpperCase()}</span><div><small>CREATED BY</small><strong>{selected.author}</strong></div></div><hr />
+        <div className="section-title"><span>NEARBY IN THE UNIVERSE</span><small>SEMANTIC SIMILARITY</small></div>
+        <div className="related-list">{selected.neighbors.map(([id, score], index) => { const plugin = pluginById.get(id); if (!plugin) return null; return <button key={id} onClick={() => selectPlugin(plugin)}><span className="related-index">{String(index + 1).padStart(2, "0")}</span><i style={{ background: clusterById.get(plugin.cluster)?.color }} /><span>{plugin.name}<small>{clusterById.get(plugin.cluster)?.name}</small></span><em>{Math.round(score * 100)}%</em></button> })}</div>
+        <div className="panel-actions"><a href={`https://github.com/${selected.repo}`} target="_blank" rel="noreferrer">GitHub ↗</a><a href={`obsidian://show-plugin?id=${encodeURIComponent(selected.id)}`}>Open in Obsidian ↗</a></div>
+      </> : <div className="empty-detail"><span className="empty-glyph">✦</span><h1>Explore the ecosystem</h1><p>Search for a plugin or select any point on the map to see what it does and what lives nearby.</p><div className="ecosystem-stat"><strong>{data?.count.toLocaleString() ?? "—"}</strong><span>plugins across {data?.clusters.length ?? "—"} semantic regions</span></div></div>}
     </aside>
+
+    {aboutOpen && <div className="about-backdrop" role="button" tabIndex={0} aria-label="Close methodology dialog" onKeyDown={(event) => { if (event.key === "Escape" || event.key === "Enter") setAboutOpen(false); }} onClick={(event) => { if (event.target === event.currentTarget) setAboutOpen(false); }}><section className="about-dialog" role="dialog" aria-modal="true" aria-labelledby="about-title"><button aria-label="Close" onClick={() => setAboutOpen(false)}>×</button><span className="eyebrow">THE CARTOGRAPHY</span><h2 id="about-title">How the universe is made</h2><p>Every point is a real community plugin from Obsidian’s canonical registry. Names, descriptions, and repository READMEs are converted into semantic vectors. Plugins with similar capabilities become neighbors.</p><ol><li><strong>Collect</strong><span>Registry, download statistics, and README text</span></li><li><strong>Understand</strong><span>TF-IDF and latent semantic analysis</span></li><li><strong>Connect</strong><span>Cosine nearest-neighbor graph</span></li><li><strong>Map</strong><span>UMAP projection and semantic clustering</span></li></ol><p className="method-note">Node size represents log downloads. Color represents an emergent cluster. Geography is precomputed and rendered locally in your browser.</p><a href="https://github.com/obsidianmd/obsidian-releases" target="_blank" rel="noreferrer">View the source registry ↗</a></section></div>}
   </main>;
 }
