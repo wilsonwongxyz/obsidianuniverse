@@ -113,17 +113,6 @@ export default function UniverseMap() {
     ctx.save();
     ctx.translate(camera.x, camera.y);
     ctx.scale(camera.k, camera.k);
-    for (const cluster of data.clusters) {
-      const point = { x: cluster.x / 100 * WORLD.width, y: cluster.y / 100 * WORLD.height };
-      const alpha = activeCluster === null || activeCluster === cluster.id ? .17 : .035;
-      ctx.fillStyle = cluster.color;
-      ctx.globalAlpha = alpha;
-      ctx.font = `600 ${Math.max(22, 30 / camera.k)}px Georgia, serif`;
-      ctx.textAlign = "center";
-      ctx.letterSpacing = "3px";
-      ctx.fillText(cluster.name.toUpperCase(), point.x, point.y - 34 / camera.k);
-    }
-
     for (const plugin of data.plugins) {
       const point = worldPoint(plugin);
       const sx = point.x * camera.k + camera.x;
@@ -152,30 +141,103 @@ export default function UniverseMap() {
       }
     }
 
+    for (const focusId of [selectedId, hoveredId]) {
+      const plugin = pluginById.get(focusId);
+      if (!plugin) continue;
+      const point = worldPoint(plugin);
+      const radius = 2 + Math.log10(plugin.downloads + 10) * .8;
+      ctx.strokeStyle = "#ffffff";
+      ctx.lineWidth = 1.5 / camera.k;
+      ctx.globalAlpha = focusId === selectedId ? .95 : .7;
+      ctx.beginPath();
+      ctx.arc(point.x, point.y, (radius + 6) / camera.k, 0, Math.PI * 2);
+      ctx.stroke();
+    }
+    ctx.restore();
+
+    // Region names stay a constant screen size. Previously these were clamped
+    // in world units, which made them grow dramatically as the camera zoomed.
+    for (const cluster of data.clusters) {
+      const sx = cluster.x / 100 * WORLD.width * camera.k + camera.x;
+      const sy = cluster.y / 100 * WORLD.height * camera.k + camera.y;
+      if (sx < -180 || sy < -40 || sx > width + 180 || sy > height + 40) continue;
+      ctx.globalAlpha = activeCluster === null || activeCluster === cluster.id ? .16 : .035;
+      ctx.fillStyle = cluster.color;
+      ctx.font = "600 22px Georgia, serif";
+      ctx.textAlign = "center";
+      ctx.letterSpacing = "2px";
+      ctx.fillText(cluster.name.toUpperCase(), sx, sy - 28);
+    }
+
+    // Greedily place plugin labels in screen space. Important plugins are
+    // considered first and an occupancy grid rejects overlapping text boxes.
+    const threshold = camera.k < .45 ? 1_500_000
+      : camera.k < .75 ? 450_000
+      : camera.k < 1.1 ? 150_000
+      : camera.k < 1.6 ? 50_000
+      : camera.k < 2.3 ? 12_000
+      : 0;
+    const neighborIds = new Set(selected?.neighbors.map(([id]) => id) ?? []);
     const labels: Plugin[] = [];
     for (const plugin of data.plugins) {
       const point = worldPoint(plugin);
       const sx = point.x * camera.k + camera.x;
       const sy = point.y * camera.k + camera.y;
       if (sx < -80 || sy < -30 || sx > width + 80 || sy > height + 30) continue;
-      if (plugin.id === selectedId || plugin.id === hoveredId || (camera.k > .7 && plugin.downloads > 350_000) || (camera.k > 1.25 && plugin.downloads > 25_000) || camera.k > 2.2) labels.push(plugin);
+      if (activeCluster !== null && activeCluster !== plugin.cluster && plugin.id !== selectedId && plugin.id !== hoveredId) continue;
+      if (plugin.id === selectedId || plugin.id === hoveredId || neighborIds.has(plugin.id) || plugin.downloads >= threshold) labels.push(plugin);
     }
-    labels.sort((a, b) => a.downloads - b.downloads);
+    const priority = (plugin: Plugin) => plugin.id === selectedId ? 4
+      : plugin.id === hoveredId ? 3
+      : neighborIds.has(plugin.id) ? 2
+      : Math.log10(plugin.downloads + 10) / 10;
+    labels.sort((a, b) => priority(b) - priority(a) || b.downloads - a.downloads);
+
+    type LabelBox = { left: number; right: number; top: number; bottom: number };
+    const grid = new Map<string, LabelBox[]>();
+    const cellSize = 64;
+    const overlaps = (box: LabelBox) => {
+      const minX = Math.floor(box.left / cellSize), maxX = Math.floor(box.right / cellSize);
+      const minY = Math.floor(box.top / cellSize), maxY = Math.floor(box.bottom / cellSize);
+      for (let gx = minX; gx <= maxX; gx++) for (let gy = minY; gy <= maxY; gy++) {
+        for (const other of grid.get(`${gx}:${gy}`) ?? []) {
+          if (box.left < other.right && box.right > other.left && box.top < other.bottom && box.bottom > other.top) return true;
+        }
+      }
+      return false;
+    };
+    const occupy = (box: LabelBox) => {
+      const minX = Math.floor(box.left / cellSize), maxX = Math.floor(box.right / cellSize);
+      const minY = Math.floor(box.top / cellSize), maxY = Math.floor(box.bottom / cellSize);
+      for (let gx = minX; gx <= maxX; gx++) for (let gy = minY; gy <= maxY; gy++) {
+        const key = `${gx}:${gy}`;
+        const bucket = grid.get(key) ?? [];
+        bucket.push(box);
+        grid.set(key, bucket);
+      }
+    };
+
+    let placed = 0;
+    const labelLimit = Math.min(280, Math.max(60, Math.floor(width * height / 4200)));
     for (const plugin of labels) {
+      if (placed >= labelLimit && plugin.id !== selectedId && plugin.id !== hoveredId) break;
       const point = worldPoint(plugin);
       const isFocus = plugin.id === selectedId || plugin.id === hoveredId;
       const radius = 2 + Math.log10(plugin.downloads + 10) * .8;
-      ctx.globalAlpha = activeCluster !== null && activeCluster !== plugin.cluster ? .12 : 1;
+      const sx = point.x * camera.k + camera.x;
+      const sy = point.y * camera.k + camera.y + radius + 14;
+      const fontSize = isFocus ? 14 : 12;
+      ctx.font = `${isFocus ? 700 : 500} ${fontSize}px Arial, sans-serif`;
+      const textWidth = ctx.measureText(plugin.name).width;
+      const box = { left: sx - textWidth / 2 - 5, right: sx + textWidth / 2 + 5, top: sy - fontSize - 3, bottom: sy + 5 };
+      if (!isFocus && overlaps(box)) continue;
+      occupy(box);
+      placed++;
+      ctx.globalAlpha = 1;
       ctx.fillStyle = isFocus ? "#ffffff" : "#c7d0de";
-      ctx.font = `${isFocus ? 700 : 500} ${Math.max(11, (isFocus ? 14 : 12) / camera.k)}px Arial, sans-serif`;
       ctx.textAlign = "center";
-      ctx.fillText(plugin.name, point.x, point.y + (radius + 14) / camera.k);
-      if (isFocus) {
-        ctx.strokeStyle = "#ffffff"; ctx.lineWidth = 1.5 / camera.k; ctx.globalAlpha = .9;
-        ctx.beginPath(); ctx.arc(point.x, point.y, (radius + 6) / camera.k, 0, Math.PI * 2); ctx.stroke();
-      }
+      ctx.fillText(plugin.name, sx, sy);
     }
-    ctx.restore();
   }, [activeCluster, camera, clusterById, data, hoveredId, pluginById, selected, selectedId]);
 
   useEffect(() => { const frame = requestAnimationFrame(draw); return () => cancelAnimationFrame(frame); }, [draw]);
