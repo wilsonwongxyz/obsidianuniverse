@@ -13,10 +13,9 @@
 # testing
 /coverage
 
-# next.js
+# generated framework output
 /.next/
 /.vinext/
-/out/
 
 # misc
 .DS_Store
@@ -36,7 +35,5 @@ yarn-error.log*
 
 /dist/
 /.wrangler/
-/outputs/
-/work/
 data/raw/readmes/
 *.tsbuildinfo
