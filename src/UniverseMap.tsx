@@ -306,7 +306,14 @@ export default function UniverseMap() {
       <div className="search-wrap"><span aria-hidden="true">⌕</span><input ref={search} aria-label="Search every community plugin" value={query} onChange={(event) => setQuery(event.target.value)} placeholder="Search plugins, capabilities, authors…" /><kbd>⌘ K</kbd>
         {query && <div className="search-results">{matches.length ? matches.map((plugin) => <button key={plugin.id} onClick={() => selectPlugin(plugin)}><i style={{ background: clusterById.get(plugin.cluster)?.color }} /><span>{plugin.name}<small>{clusterById.get(plugin.cluster)?.name} · {formatDownloads(plugin.downloads)} downloads</small></span></button>) : <p>No plugins found.</p>}</div>}
       </div>
-      <div className="header-actions"><span className="data-freshness">Updated {data ? new Date(data.generatedAt).toLocaleDateString() : "—"}</span><button className="about-button" onClick={() => setAboutOpen(true)}>How it works</button></div>
+      <div className="header-actions">
+        <span className="data-freshness">Updated {data ? new Date(data.generatedAt).toLocaleDateString() : "—"}</span>
+        <a className="github-link" href="https://github.com/wilsonwongxyz/obsidianuniverse" target="_blank" rel="noreferrer" aria-label="View Obsidian Universe on GitHub">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 .7A11.3 11.3 0 0 0 8.4 22.8c.6.1.8-.3.8-.6v-2.1c-3.4.7-4.1-1.4-4.1-1.4-.5-1.4-1.3-1.8-1.3-1.8-1.1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1 1.8 2.7 1.3 3.4 1 .1-.8.4-1.3.8-1.6-2.7-.3-5.5-1.3-5.5-6A4.7 4.7 0 0 1 6.2 7.5c-.1-.3-.5-1.6.1-3.2 0 0 1-.3 3.3 1.2a11.6 11.6 0 0 1 6 0c2.3-1.5 3.3-1.2 3.3-1.2.6 1.6.2 2.9.1 3.2a4.7 4.7 0 0 1 1.2 3.3c0 4.7-2.8 5.7-5.5 6 .4.4.8 1.1.8 2.2v3.2c0 .3.2.7.8.6A11.3 11.3 0 0 0 12 .7Z" /></svg>
+          <span>GitHub</span>
+        </a>
+        <button className="about-button" onClick={() => setAboutOpen(true)}>How it works</button>
+      </div>
     </header>
 
     <section ref={viewport} className="map-viewport canvas-map" aria-label="Semantic map of all Obsidian community plugins">
