@@ -1799,6 +1799,13 @@
     "repo": "michaellee/stille"
   },
   {
+    "id": "obsidian-markmind",
+    "name": "Markmind",
+    "author": "markmindckm",
+    "description": "Mind map, outline and PDF annotation tool. (Closed source)",
+    "repo": "markmindckm/obsidian-markmind"
+  },
+  {
     "id": "obsidian-carry-forward",
     "name": "Carry-Forward",
     "author": "jglev",
@@ -3365,13 +3372,6 @@
     "author": "bramses",
     "description": "Copy and paste Stack Overflow answers.",
     "repo": "bramses/obsidian-stack-overflow"
-  },
-  {
-    "id": "obsidian-redirect",
-    "name": "Redirect",
-    "author": "jglev",
-    "description": "Facilitate management of especially non-Markdown files, by allowing aliases to be set on any file.",
-    "repo": "jglev/obsidian-redirect"
   },
   {
     "id": "zotero-bridge",
@@ -5724,6 +5724,13 @@
     "author": "mii-key",
     "description": "Manipulate links.",
     "repo": "mii-key/obsidian-links"
+  },
+  {
+    "id": "confluence-integration",
+    "name": "Confluence Integration",
+    "author": "markdown-confluence",
+    "description": "Publish Markdown content to Atlassian Confluence. It supports some Obsidian Markdown extensions for richer content.",
+    "repo": "markdown-confluence/obsidian-integration"
   },
   {
     "id": "copilot",
@@ -9016,13 +9023,6 @@
     "repo": "l1xnan/obsidian-better-export-pdf"
   },
   {
-    "id": "gslogimaker-my-bible",
-    "name": "My Bible",
-    "author": "gslogimaker",
-    "description": "Your own customizable markdown bible for your personal vault!",
-    "repo": "gslogimaker/my-bible-obsidian-plugin"
-  },
-  {
     "id": "bible-linker-pro",
     "name": "Bible linker Pro",
     "author": "floydv149",
@@ -9082,7 +9082,7 @@
     "id": "smart-second-brain",
     "name": "Smart Second Brain",
     "author": "S2B Devs",
-    "description": "Interact with your privacy focused assistant by leveraging Ollama or OpenAI and making your second brain even smarter.",
+    "description": "Chat with an agent that knows your notes, search by meaning, and see your vault grouped into topics. Runs on Ollama, OpenAI, Anthropic, and more.",
     "repo": "s2b-dev/smart-second-brain"
   },
   {
@@ -14518,13 +14518,6 @@
     "repo": "anareaty/html-checkboxes"
   },
   {
-    "id": "automatic-linker",
-    "name": "Automatic Linker",
-    "author": "kdnk",
-    "description": "automatically converts plain text file references into wiki links",
-    "repo": "kdnk/obsidian-automatic-linker"
-  },
-  {
     "id": "checkbox-sync",
     "name": "Checkbox Sync",
     "author": "groldsf",
@@ -17591,6 +17584,13 @@
     "repo": "thewheelbarrow/quick-matrix"
   },
   {
+    "id": "hydrate",
+    "name": "Hydrate",
+    "author": "hydrateagent",
+    "description": "Cursor-like note agent with MCP support.",
+    "repo": "hydrateagent/hydrate"
+  },
+  {
     "id": "dangerous-mode",
     "name": "Dangerous Mode",
     "author": "vanshkumar",
@@ -18340,6 +18340,13 @@
     "repo": "rohrbachd/obsidian-review-critics"
   },
   {
+    "id": "health-md",
+    "name": "Health.md Visualizations",
+    "author": "codybontecou",
+    "description": "Render Apple Health data visualizations from JSON, CSV, or Markdown files, with custom date and time range filters. - This plugin has not been manually reviewed by Obsidian staff.",
+    "repo": "codybontecou/health-md-visualizations"
+  },
+  {
     "id": "odyssey",
     "name": "Odyssey",
     "author": "zzzzswh",
@@ -18711,6 +18718,13 @@
     "repo": "binnyva/obsidian-slasher"
   },
   {
+    "id": "memex",
+    "name": "Memex",
+    "author": "worldbrain",
+    "description": "Search, cite & chat with your bookmarking second brain. - This plugin has not been manually reviewed by Obsidian staff.",
+    "repo": "worldbrain/memex-obsidian"
+  },
+  {
     "id": "engnese",
     "name": "Engnese",
     "author": "xxxgeorge",
@@ -18786,6 +18800,13 @@
     "author": "bcs",
     "description": "A sidebar bookmark browser. Browse websites and manage bookmarks right in the sidebar. - This plugin has not been manually reviewed by Obsidian staff.",
     "repo": "bcs1037/side-bookmark"
+  },
+  {
+    "id": "feishu-importer",
+    "name": "Feishu Importer",
+    "author": "leon",
+    "description": "Import Feishu cloud docs into your local vault as Markdown. - This plugin has not been manually reviewed by Obsidian staff.",
+    "repo": "missmess/obsidian-feishu-importer"
   },
   {
     "id": "move-to-new-folder",
@@ -18910,7 +18931,7 @@
     "id": "date-helpers",
     "name": "Date Helpers",
     "author": "patrice-bour",
-    "description": "Centralized date tools with keyboard-first interaction, natural language parsing, and full internationalization support. - This plugin has not been manually reviewed by Obsidian staff.",
+    "description": "Insert dates without leaving the line: a keyboard-first picker, an inline popup that reads natural language in six languages, format presets you can extend, and daily note links. - This plugin has not been manually reviewed by Obsidian staff.",
     "repo": "patrice-bour/obsidian-date-helpers"
   },
   {
@@ -19272,8 +19293,8 @@
   },
   {
     "id": "project-manager",
-    "name": "Project Manager",
-    "author": "dotpm2",
+    "name": "dotpm",
+    "author": "dotpm - Project Manager for Obsidian",
     "description": "Full-featured task and project management: stunning Gantt charts, Kanban boards, Table views, customizable fields, due date notifications, dependancies - This plugin has not been manually reviewed by Obsidian staff.",
     "repo": "dotpm/obsidian-pm"
   },
@@ -20482,6 +20503,13 @@
     "repo": "junjieim/better-quote"
   },
   {
+    "id": "incremental-reading",
+    "name": "Incremental Reading",
+    "author": "gpanakkal",
+    "description": "Leverage spaced repetition to incrementally build understanding and retain knowledge. - This plugin has not been manually reviewed by Obsidian staff.",
+    "repo": "gpanakkal/incremental-reading-obsidian"
+  },
+  {
     "id": "custom-selectors",
     "name": "Custom Selectors",
     "author": "hodie",
@@ -20687,7 +20715,7 @@
   {
     "id": "pdf-page-numbers",
     "name": "PDF Page Numbers",
-    "author": "dwbutler",
+    "author": "David Butler",
     "description": "Adds page numbers to PDF exports (e.g. 'Page 1 of 5'). - This plugin has not been manually reviewed by Obsidian staff.",
     "repo": "dwbutler/obsidian-pdf-page-numbers"
   },
@@ -20886,6 +20914,13 @@
     "author": "sotirangelo",
     "description": "Display a fantasy campaign map with interactive Features linked to vault notes. - This plugin has not been manually reviewed by Obsidian staff.",
     "repo": "sotirangelo/obsidian-fantasy-map"
+  },
+  {
+    "id": "inline-annotations",
+    "name": "Inline Annotations",
+    "author": "cetrodk",
+    "description": "Add inline annotations to selected text that show in a popup on click. - This plugin has not been manually reviewed by Obsidian staff.",
+    "repo": "cetrodk/obsidian-inline-annotations"
   },
   {
     "id": "map-note",
@@ -21313,6 +21348,13 @@
     "author": "daolyap",
     "description": "Adds context menu options to open files and folders in a terminal, with configurable executables/apps for each option. - This plugin has not been manually reviewed by Obsidian staff.",
     "repo": "daolyap/openterm"
+  },
+  {
+    "id": "floating-quick-note",
+    "name": "Floating Quick Note",
+    "author": "sabosman",
+    "description": "Open a floating always-on-top note window for quick notes. - This plugin has not been manually reviewed by Obsidian staff.",
+    "repo": "sabosman/obisidian-floatingnote"
   },
   {
     "id": "replace-em-dash",
@@ -21864,7 +21906,7 @@
     "id": "global-ticker",
     "name": "Global Ticker",
     "author": "cokaizoku",
-    "description": "Adds a panel that provides a global ticker for news and stock updates, using Currents and Finnhub APIs. - This plugin has not been manually reviewed by Obsidian staff.",
+    "description": "Adds a panel that provides a global ticker for news and stock updates. - This plugin has not been manually reviewed by Obsidian staff.",
     "repo": "cokaizoku/obsidian-global-ticker"
   },
   {
@@ -22029,6 +22071,13 @@
     "repo": "scottschroeder/obsidian-graph-search"
   },
   {
+    "id": "simple-microsoft-todo",
+    "name": "Simple Microsoft To Do",
+    "author": "ruochen0513",
+    "description": "Integrate Microsoft To Do in sidebar. - This plugin has not been manually reviewed by Obsidian staff.",
+    "repo": "ruochen0513/obsidian-simple-ms-todo-plugin"
+  },
+  {
     "id": "runalone-project-manager",
     "name": "Runalone Project Manager",
     "author": "nestedshell",
@@ -22148,6 +22197,13 @@
     "repo": "gogothegogo/Simple-exporter-for-LLM"
   },
   {
+    "id": "notes-dashboard",
+    "name": "Notes Dashboard",
+    "author": "Kiryl Harbacheuski",
+    "description": "Dashboard with favorite notes as cards displayed in a Kanban-style board. - This plugin has not been manually reviewed by Obsidian staff.",
+    "repo": "kharbacheuski/obsidian-notes-dashboard"
+  },
+  {
     "id": "timelink",
     "name": "TimeLink",
     "author": "korioinc",
@@ -22192,7 +22248,7 @@
   {
     "id": "evc-local-sync",
     "name": "EVC Local Sync to AI Agent",
-    "author": "entire-vc",
+    "author": "Entire VC",
     "description": "Keep a vault folder and an external project documentation folder in two-way sync, so your notes and a codebase's docs stay current automatically without manual copy-paste. - This plugin has not been manually reviewed by Obsidian staff.",
     "repo": "entire-vc/evc-local-sync-plugin"
   },
@@ -22302,6 +22358,13 @@
     "repo": "shuxueshuxue/obsidian-embedding-plugin"
   },
   {
+    "id": "syncable-dictionary",
+    "name": "Syncable Dictionary",
+    "author": "masoniis",
+    "description": "Maintains a global list of dictionary words and automatically updates the official spellcheck dictionary to match. This enables syncing of the official dictionary across desktop devices. - This plugin has not been manually reviewed by Obsidian staff.",
+    "repo": "masoniis/obsidian-syncable-dictionary"
+  },
+  {
     "id": "audio-recording-timer",
     "name": "Audio Recording Timer",
     "author": "Musashino Software",
@@ -22342,13 +22405,6 @@
     "author": "Johannes Schwartz",
     "description": "Generates publish.js/publish.css and a publish-assets manifest for TTRPG Tools: Maps (Zoom Map). - This plugin has not been manually reviewed by Obsidian staff.",
     "repo": "jareika/TTRPG-Tools-Publish"
-  },
-  {
-    "id": "flow-state",
-    "name": "Flowstate",
-    "author": "findflowstate",
-    "description": "Turn handwriting and voice memos into text - This plugin has not been manually reviewed by Obsidian staff.",
-    "repo": "findflowstate/obsidian-flow-state"
   },
   {
     "id": "steamgriddb-embedder",
@@ -22720,13 +22776,6 @@
     "author": "kgdrathan",
     "description": "Automatically moves completed tasks to the bottom of their lists. - This plugin has not been manually reviewed by Obsidian staff.",
     "repo": "kgdrathan/donedrop"
-  },
-  {
-    "id": "task-planner",
-    "name": "Task Planner",
-    "author": "selfish",
-    "description": "Manage tasks with drag-and-drop planning, Today focus, backlog, overdue tracking, and weekly time horizons. - This plugin has not been manually reviewed by Obsidian staff.",
-    "repo": "selfish/obsidian-task-planner"
   },
   {
     "id": "lighthouse",
@@ -23716,6 +23765,13 @@
     "repo": "tcyeee/obsidian-image-cluster"
   },
   {
+    "id": "narrator",
+    "name": "Narrator",
+    "author": "jtcorrin",
+    "description": "Transform notes into AI-narrated audio. Select text for instant narration or create multi-voice character scripts. - This plugin has not been manually reviewed by Obsidian staff.",
+    "repo": "jtcorrin/narrator"
+  },
+  {
     "id": "board-view",
     "name": "Board View",
     "author": "seventhxiv",
@@ -24252,7 +24308,7 @@
     "name": "Speech to Text",
     "author": "asyouplz",
     "description": "Convert audio recordings to text using multiple AI providers (OpenAI Whisper, Deepgram) - This plugin has not been manually reviewed by Obsidian staff.",
-    "repo": "asyouplz/SpeechNote"
+    "repo": "asyouplz/Speech-to-Text"
   },
   {
     "id": "agent-client",
@@ -24470,6 +24526,13 @@
     "author": "Jun Lim",
     "description": "Import posts from Naver Blog with AI-powered features, subscription management, and comprehensive content parsing - This plugin has not been manually reviewed by Obsidian staff.",
     "repo": "hyungyunlim/obsidian-naver-blog-importer"
+  },
+  {
+    "id": "semantic-vault-mcp",
+    "name": "Semantic Notes Vault MCP",
+    "author": "Aaron Bockelie",
+    "description": "Give Claude Desktop and other AI assistants semantic access to your notes through a built-in Model Context Protocol (MCP) server. - This plugin has not been manually reviewed by Obsidian staff.",
+    "repo": "aaronsb/obsidian-mcp-plugin"
   },
   {
     "id": "co-intelligence",
@@ -24930,7 +24993,7 @@
     "id": "workout-journal",
     "name": "Workout Journal",
     "author": "i-am-rudi",
-    "description": "Track your workouts, exercises, and fitness progress. Create repeatable workout templates, structure in workout plans and log in an interactive sessions. - This plugin has not been manually reviewed by Obsidian staff.",
+    "description": "A fitness tracking plugin with a user-friendly UI, track in an active session, but have every part live in and interact with your Vault as notes. - This plugin has not been manually reviewed by Obsidian staff.",
     "repo": "i-am-rudi/workout-journal"
   },
   {
@@ -25226,6 +25289,13 @@
     "author": "paulobsf",
     "description": "Render a life-in-weeks (memento mori) calendar with work, life, and other planning phases, plus linked key events. - This plugin has not been manually reviewed by Obsidian staff.",
     "repo": "paulobsf/obsidian-life-calendar"
+  },
+  {
+    "id": "mix-calendar",
+    "name": "Mix Calendar",
+    "author": "liury23",
+    "description": "A calendar widget combining Gregorian and Lunar calendars with 5 levels of periodic notes, task tracking, and holiday support. - This plugin has not been manually reviewed by Obsidian staff.",
+    "repo": "liury23/mix-calendar"
   },
   {
     "id": "vox-reader",
@@ -25886,6 +25956,13 @@
     "repo": "zerodark-0/vIbGyOr"
   },
   {
+    "id": "review-simple",
+    "name": "Review Simple",
+    "author": "citrusrenegade",
+    "description": "Revisit notes on a schedule you define. - This plugin has not been manually reviewed by Obsidian staff.",
+    "repo": "citrusrenegade/review-simple-obsidian"
+  },
+  {
     "id": "drag-out",
     "name": "Drag Out",
     "author": "xwberry",
@@ -26166,6 +26243,13 @@
     "repo": "one-wheeled-driver/obsidian-passport"
   },
   {
+    "id": "blip-capture",
+    "name": "Blip Capture",
+    "author": "Jeff Miller",
+    "description": "Quickly capture short notes (Blips) via hotkey or ribbon button and save them to a central file. - This plugin has not been manually reviewed by Obsidian staff.",
+    "repo": "gamesinplay/obsidian-blip-capture"
+  },
+  {
     "id": "journal-bases",
     "name": "Journal Bases",
     "author": "Sébastien Dubois",
@@ -26227,6 +26311,13 @@
     "author": "Bryan Maniotakis",
     "description": "Build your vocabulary one word at a time. Add words manually, or grab them instantly with the Chrome extension or Kobo importer. - This plugin has not been manually reviewed by Obsidian staff.",
     "repo": "bryanmanio/obsidian-lexophile"
+  },
+  {
+    "id": "wikilink-helper",
+    "name": "Wikilink Helper",
+    "author": "ivan1248",
+    "description": "Automatically adds wikilink display text or normalizes existing wikilinks. - This plugin has not been manually reviewed by Obsidian staff.",
+    "repo": "ivan1248/obsidian-wikilink-helper"
   },
   {
     "id": "ai-model-workbench",
@@ -26399,9 +26490,9 @@
   {
     "id": "karpathywiki",
     "name": "Karpathy LLM Wiki",
-    "author": "Greener-Dalii",
+    "author": "gd4ai",
     "description": "Karpathy's LLM Wiki implementation plugin for Obsidian - turns notes and PDFs into a linked, LLM-powered knowledge base with entity pages, concept pages, graph-powered Q&A, and local-first privacy. - This plugin has not been manually reviewed by Obsidian staff.",
-    "repo": "green-dalii/obsidian-llm-wiki"
+    "repo": "gd4ai/obsidian-llm-wiki"
   },
   {
     "id": "sync-trakt",
@@ -26758,7 +26849,7 @@
     "name": "Sherlockeye OSINT",
     "author": "p1ngul1n0",
     "description": "Sherlockeye OSINT API integration for automated intelligence gathering - This plugin has not been manually reviewed by Obsidian staff.",
-    "repo": "p1ngul1n0/obsidian-sherlockeye-plugin"
+    "repo": "antoniaci/obsidian-sherlockeye-plugin"
   },
   {
     "id": "simple-timeline",
@@ -26815,13 +26906,6 @@
     "author": "Nymbo",
     "description": "Add a minimap to your Markdown notes. - This plugin has not been manually reviewed by Obsidian staff.",
     "repo": "nymbo/Markdown-Minimap"
-  },
-  {
-    "id": "recent-edits",
-    "name": "Recent Edits",
-    "author": "Christopher Wagner",
-    "description": "See what actually changed in your vault, grouped by day, with a marker on anything edited outside the editor. Built for vaults where scripts and AI tools are collaboratively in one vault - This plugin has not been manually reviewed by Obsidian staff.",
-    "repo": "cwagner223355/obsidian-recent-edits"
   },
   {
     "id": "highlightr-plus",
@@ -27371,10 +27455,10 @@
   },
   {
     "id": "marp-tikz-plus",
-    "name": "Marp TikZ Plus",
+    "name": "Marp Plus",
     "author": "Kevin",
-    "description": "TikZ diagrams and full Marp presentation support — Slide Navigator, Speaker Notes, and PPTX export. - This plugin has not been manually reviewed by Obsidian staff.",
-    "repo": "kevinyuan/marp-tikz-plus"
+    "description": "Build presentations the way you build software: an AI-friendly workflow, a professional authoring experience, and the precision that scientific and engineering presentations demand. - This plugin has not been manually reviewed by Obsidian staff.",
+    "repo": "kevinyuan/obsidian-marp-plus"
   },
   {
     "id": "article-annotator",
@@ -28007,6 +28091,13 @@
     "repo": "moszinet/mail2note-obsidian-plugin"
   },
   {
+    "id": "dnd-campaign-manager",
+    "name": "Campaign Codex",
+    "author": "dmderelyn",
+    "description": "Run 5e campaigns with a typed entity graph, session runner, initiative tracker, quest board, and player-facing site export. - This plugin has not been manually reviewed by Obsidian staff.",
+    "repo": "dmderelyn/dnd-campaign-manager"
+  },
+  {
     "id": "gantt-calendar",
     "name": "Gantt Calendar",
     "author": "Sugar",
@@ -28453,13 +28544,6 @@
     "author": "chefrocker",
     "description": "Display live MQTT and REST API data directly in your notes. - This plugin has not been manually reviewed by Obsidian staff.",
     "repo": "chefrocker/obsidian-awesome-livedata-plugin"
-  },
-  {
-    "id": "live-cursor",
-    "name": "Live-Cursor",
-    "author": "panospds",
-    "description": "A free, open-source, privacy-first collaborative sync plugin. - This plugin has not been manually reviewed by Obsidian staff.",
-    "repo": "live-cursor/Live-Cursor"
   },
   {
     "id": "ogstack",
@@ -29582,6 +29666,13 @@
     "repo": "reggie86/vaultdex"
   },
   {
+    "id": "initiative-tracker-plus",
+    "name": "Initiative Tracker Plus",
+    "author": "Mike",
+    "description": "Track TTRPG combat initiative, HP, conditions, and XP in Obsidian encounter blocks. A community fork of Initiative Tracker. - This plugin has not been manually reviewed by Obsidian staff.",
+    "repo": "msweat254/initiative-tracker"
+  },
+  {
     "id": "gallery-view",
     "name": "Gallery View",
     "author": "mkshp-dev",
@@ -30149,13 +30240,6 @@
     "repo": "free-solo-lab/obsidian-readwise-tracker"
   },
   {
-    "id": "open-pdf-translate",
-    "name": "OpenRouter PDF Translator",
-    "author": "Vetrenar",
-    "description": "Translate PDF documents with overlay, supports OpenRouter, OpenAI, Gemini, Ollama, and custom endpoints. Includes layout detection,  and persistent storage of translations.. - This plugin has not been manually reviewed by Obsidian staff.",
-    "repo": "vetrenar/Open-PDF-Translate"
-  },
-  {
     "id": "codeblock-language-detector",
     "name": "CodeBlock Language Detector",
     "author": "Lars Bücker",
@@ -30319,7 +30403,7 @@
   {
     "id": "lucrjournal",
     "name": "LucrJournal",
-    "author": "lucrtrade2",
+    "author": "lucrtrade",
     "description": "Record your trades as local Markdown files and link every entry to its key levels, confluences, market analysis, and news — turning your journal into a connected, private knowledge graph. - This plugin has not been manually reviewed by Obsidian staff.",
     "repo": "lucrtrade/lucrjournal-obsidian-plugin"
   },
@@ -30644,6 +30728,13 @@
     "author": "Kiril",
     "description": "prompt workflow automation, batch runs, run history, external vector index storage, Daily Note workflows, prompt library, RAG, and source references. - This plugin has not been manually reviewed by Obsidian staff.",
     "repo": "kiril-liu/obsidian-ai-plugin"
+  },
+  {
+    "id": "better-calendar",
+    "name": "Better Calendar",
+    "author": "Xheldon",
+    "description": "A compact, space-filling calendar for your daily notes — open or create them from your template, and mark days that match your own highlight rules. - This plugin has not been manually reviewed by Obsidian staff.",
+    "repo": "xheldon/Obsidian-Better-Calendar"
   },
   {
     "id": "regex-css-highlighter",
@@ -30994,6 +31085,13 @@
     "author": "YuChenSSR",
     "description": "Unofficial Obsidian bridge for Grok Build, Cursor Agent, Factory Droid, Amp code and provider-backed coding agents. - This plugin has not been manually reviewed by Obsidian staff.",
     "repo": "yuchenssr/buildian"
+  },
+  {
+    "id": "external-namespaces",
+    "name": "External Namespaces",
+    "author": "jncohen",
+    "description": "Link to files and folders outside your vault. Register folder roots with short prefixes; paste any Windows path and it becomes a clickable link. - This plugin has not been manually reviewed by Obsidian staff.",
+    "repo": "jncohen/obsidian-external-namespaces"
   },
   {
     "id": "graph-context-for-claude-code",
@@ -32529,6 +32627,13 @@
     "repo": "ducktapekiller/memento"
   },
   {
+    "id": "simple-scanner",
+    "name": "Simple Scanner-OLD",
+    "author": "Extski",
+    "description": "Simple Scanner-OLD plugin for Obsidian - This plugin has not been manually reviewed by Obsidian staff.",
+    "repo": "jzstoller/jzs-simple-scanner"
+  },
+  {
     "id": "simple-plug-in-organizer",
     "name": "Simple Plug-in Organizer",
     "author": "October",
@@ -33134,7 +33239,7 @@
     "id": "lumina",
     "name": "Lumina",
     "author": "Lumina",
-    "description": "Multilingual AI Assistant & Copilot: Chat with Notes using Any Local LLMs or Cloud APIs. Features RAG, Smart Semantic Vector Search, Auto Embeddings & Autonomous MCP Agent. - This plugin has not been manually reviewed by Obsidian staff.",
+    "description": "Multilingual AI Assistant & Copilot: Chat with Notes using any local LLM or cloud API, and connect with CLI Agents. Features RAG, Smart Semantic Vector Search, Auto Embeddings & Autonomous MCP Agent. - This plugin has not been manually reviewed by Obsidian staff.",
     "repo": "lumina-apps/obsidian-lumina"
   },
   {
@@ -33979,17 +34084,10 @@
   },
   {
     "id": "german-law-lookup",
-    "name": "Law Lookup for Germany + Austria + Switzerland",
+    "name": "European Law Lookup",
     "author": "GammaFunds",
-    "description": "Look up German federal law references in Obsidian and insert formatted law text into notes. - This plugin has not been manually reviewed by Obsidian staff.",
-    "repo": "gammafunds/german-law-lookup"
-  },
-  {
-    "id": "dual-link",
-    "name": "DualLink",
-    "author": "马可菠萝",
-    "description": "将本地和保险库中的文件嵌入到您的文档中。支持图片、音频和视频的内联渲染。 - This plugin has not been manually reviewed by Obsidian staff.",
-    "repo": "mowdw/DualLink"
+    "description": "Look up EU regulations, directives and decisions in 24 official languages, plus German, Austrian and Swiss law. Preview legal text from official sources and insert formatted citations into your notes. - This plugin has not been manually reviewed by Obsidian staff.",
+    "repo": "gammafunds/European-Law-Lookup"
   },
   {
     "id": "hypermnesic-companion",
@@ -35049,10 +35147,17 @@
     "repo": "erykjj/traverture"
   },
   {
+    "id": "bible-study",
+    "name": "Bible Study",
+    "author": "linkongren",
+    "description": "圣经研读助手 — 快速引用经文、圣经阅读面板，支持和合本 (CUV) - This plugin has not been manually reviewed by Obsidian staff.",
+    "repo": "linkongren/obsidian-bible-study"
+  },
+  {
     "id": "pdf-scholia-scribe",
     "name": "PDF Scholia Scribe",
     "author": "michellegdyason",
-    "description": "Citation-focused PDF & Docx annotation & collaboration, and note-linking for Obsidian. - This plugin has not been manually reviewed by Obsidian staff.",
+    "description": "Citation-focused PDF & Docx annotation & collaboration, and note-linking & import annotations. - This plugin has not been manually reviewed by Obsidian staff.",
     "repo": "michellegdyason/pdf-scholia-scribe"
   },
   {
@@ -36176,13 +36281,6 @@
     "repo": "remihoeppe/vault-notatypo"
   },
   {
-    "id": "daytasks",
-    "name": "DayTasks",
-    "author": "MHElnour",
-    "description": "A lightweight, day-first task manager for your daily notes. - This plugin has not been manually reviewed by Obsidian staff.",
-    "repo": "mhelnour/daytasks"
-  },
-  {
     "id": "publish-to-wordpress",
     "name": "Publish to WordPress",
     "author": "DevidCode",
@@ -36827,6 +36925,13 @@
     "repo": "aplikofi/Obsidian-bckp-Plugin"
   },
   {
+    "id": "codefile",
+    "name": "Code File Embed",
+    "author": "Willian Saez",
+    "description": "Embed the contents of a vault file as a syntax-highlighted code block via a codefile fenced block. - This plugin has not been manually reviewed by Obsidian staff.",
+    "repo": "williansaez/obsidian-code-file-embed"
+  },
+  {
     "id": "neural-vault",
     "name": "Neural Vault",
     "author": "Willian Saez",
@@ -37443,13 +37548,6 @@
     "repo": "electroluminescent/obsidian-extended-properties"
   },
   {
-    "id": "hybrid-git-sync",
-    "name": "Hybrid Git Sync",
-    "author": "walkskyer",
-    "description": "Cross-platform Git sync plugin. Desktop uses native git and API, mobile uses GitHub/Gitea/GitLab API. - This plugin has not been manually reviewed by Obsidian staff.",
-    "repo": "wk-obsidian/HybridGitSync"
-  },
-  {
     "id": "eve-apple-tree",
     "name": "Eve Apple Tree Thinking System",
     "author": "Evelyn Chan",
@@ -37819,13 +37917,6 @@
     "author": "Ismail Ivanov",
     "description": "Realtime vault sync and live team presence across your devices. - This plugin has not been manually reviewed by Obsidian staff.",
     "repo": "ismailivanov/sync-deck"
-  },
-  {
-    "id": "thunderegg",
-    "name": "Thunderegg",
-    "author": "Thunderegg",
-    "description": "Convert attachments — documents, images, even meeting recordings (transcribed on-device) — to Markdown via the local Thunderegg engine. Adds Grades, Bonds and Condensers. - This plugin has not been manually reviewed by Obsidian staff.",
-    "repo": "5tukgpt/thunderegg"
   },
   {
     "id": "jw-congregation-program",
@@ -38804,7 +38895,7 @@
     "id": "random-review",
     "name": "Random Review",
     "author": "TimeLine",
-    "description": "从指定文件夹随机抽取笔记，支持标签和属性筛选，全屏浏览复习。Randomly select notes from specified folders with tag and property filtering, and review them in fullscreen. - This plugin has not been manually reviewed by Obsidian staff.",
+    "description": "Randomly pick notes from your vault with tag and property filtering, review them fullscreen with answer toggle, quiz   mode with timer and scoring, and export to HTML, Markdown, or Word. - This plugin has not been manually reviewed by Obsidian staff.",
     "repo": "ktlamors/obsidian-random-review"
   },
   {
@@ -38820,6 +38911,13 @@
     "author": "onlymykazari",
     "description": "Markdown-backed kanban boards with two-way Nextcloud Deck sync. - This plugin has not been manually reviewed by Obsidian staff.",
     "repo": "onlymykazari/obsidian-nextcloud-deck"
+  },
+  {
+    "id": "remember-every-pay",
+    "name": "Remember Every Pay",
+    "author": "chinaqianb",
+    "description": "To record any money your pay and make a summary - This plugin has not been manually reviewed by Obsidian staff.",
+    "repo": "chinaqianb/obsidian-Remember-every-pay"
   },
   {
     "id": "spark-memo",
@@ -39289,13 +39387,6 @@
     "author": "dcadolph",
     "description": "Chop AI slop from your notes. The rules engine runs locally in the app; your text never leaves the vault. - This plugin has not been manually reviewed by Obsidian staff.",
     "repo": "dcadolph/slop-chop-obsidian"
-  },
-  {
-    "id": "workbuddian",
-    "name": "Workbuddian",
-    "author": "jiang198012",
-    "description": "Chat with the local WorkBuddy/CodeBuddy CLI as an AI agent in your vault: streaming replies, thinking/tool-call cards, @-note references, file attachments, model/permission toolbar, slash commands, inline edit with diff, export and search. - This plugin has not been manually reviewed by Obsidian staff.",
-    "repo": "jiang198012/workbuddian"
   },
   {
     "id": "daily-work-log",
@@ -40684,6 +40775,13 @@
     "repo": "cwh555/AnimeList"
   },
   {
+    "id": "solomon-chat",
+    "name": "Solomon Chat",
+    "author": "West B",
+    "description": "A calm, Markdown-first two-sided chat for self-distanced journaling and reflection. - This plugin has not been manually reviewed by Obsidian staff.",
+    "repo": "westb-dev/Solomon-Chat"
+  },
+  {
     "id": "heading-linker",
     "name": "Heading Linker",
     "author": "max-fluff",
@@ -41209,6 +41307,13 @@
     "repo": "dxshelley/ai-translate"
   },
   {
+    "id": "pavel-dashboard",
+    "name": "Omni Workbench",
+    "author": "pavel",
+    "description": "A local-first dashboard for Pavel's existing tasks and knowledge cards. - This plugin has not been manually reviewed by Obsidian staff.",
+    "repo": "pavelpeng7/omni-workbench"
+  },
+  {
     "id": "safe-passage",
     "name": "SafePassage",
     "author": "Ji-ho Lee",
@@ -41249,6 +41354,13 @@
     "author": "kamijoucen",
     "description": "A lightweight yet powerful ACP chat client, inheriting models, tools, and sessions from opencode. - This plugin has not been manually reviewed by Obsidian staff.",
     "repo": "kamijoucen/obsidian-openyolo"
+  },
+  {
+    "id": "chrono-notes",
+    "name": "Chrono Notes",
+    "author": "ZhengYX",
+    "description": "A calendar workspace for periodic notes, calendar extensions, regional holidays, tasks, and time ranges. - This plugin has not been manually reviewed by Obsidian staff.",
+    "repo": "zhyx91/obsidian-chrono-notes"
   },
   {
     "id": "local-image-resizer",
@@ -41374,7 +41486,7 @@
     "name": "Second-Brain Tarot",
     "author": "h-jessen",
     "description": "A tarot reading drawn from a real, complete deck and interpreted fresh against your own vault's content — not a lookup table, not generic tarot copy. - This plugin has not been manually reviewed by Obsidian staff.",
-    "repo": "h-jessen/second-brain-tarot-plugin"
+    "repo": "neon-weaver/second-brain-tarot-plugin"
   },
   {
     "id": "mubu-sync",
@@ -41702,7 +41814,7 @@
     "id": "discussion-hub",
     "name": "Discussion Hub",
     "author": "TAKESHI MORITA",
-    "description": "Shared multi-model AI discussions for Obsidian AI plugins. - This plugin has not been manually reviewed by Obsidian staff.",
+    "description": "Shared multi-model AI discussions, riddle solving, and Keyword Wolf for Obsidian AI plugins. - This plugin has not been manually reviewed by Obsidian staff.",
     "repo": "takeshy/obsidian-discussion-hub"
   },
   {
@@ -42357,13 +42469,6 @@
     "repo": "mariosgkmeng/Straightforward-Obsidian2Latex"
   },
   {
-    "id": "smart-cluster-graph",
-    "name": "Smart Cluster Graph",
-    "author": "Alan Li",
-    "description": "Folder-based cluster graph explorer with strongest cross-community bridges, line crossing avoidance, and tight convex hulls. - This plugin has not been manually reviewed by Obsidian staff.",
-    "repo": "comedianhhh/obsidian-smart-cluster-graph"
-  },
-  {
     "id": "supernote-cloud-sync",
     "name": "Supernote Cloud Sync",
     "author": "raanym",
@@ -42976,7 +43081,7 @@
     "id": "token-usage",
     "name": "Token Usage",
     "author": "Björn-Olaf Lange",
-    "description": "Real-time Claude Code token tracking inside Obsidian — sidebar with 5 time ranges, Cache Write/Read split, 7-day model chart, HTML dashboard and built-in glossary. No API key needed. - This plugin has not been manually reviewed by Obsidian staff.",
+    "description": "Live Claude Code token tracking — sidebar with an activity heatmap, an HTML dashboard with per-vault/project breakdown, and automatic rate-limit detection. No API key needed. - This plugin has not been manually reviewed by Obsidian staff.",
     "repo": "beolatn/TokenUsage"
   },
   {
@@ -43030,10 +43135,10 @@
   },
   {
     "id": "layout-switcher-uk-en",
-    "name": "Layout Switcher (UA-EN)",
+    "name": "Fix Word Layout (UA-EN)",
     "author": "kosperun",
     "description": "Convert selected text between English and Ukrainian keyboard layouts, for when you forgot to switch layout before typing - This plugin has not been manually reviewed by Obsidian staff.",
-    "repo": "kosperun/obsidian-layout-switcher-uk-en"
+    "repo": "kosperun/obsidian-fix-word-layout-uk-en"
   },
   {
     "id": "anki-card-link",
@@ -43055,6 +43160,13 @@
     "author": "aipyer",
     "description": "将位域定义渲染为交互式 SVG 图表和表格。 - This plugin has not been manually reviewed by Obsidian staff.",
     "repo": "aipyer/bitfield"
+  },
+  {
+    "id": "window-spaces",
+    "name": "Window Spaces",
+    "author": "Edward Hsieh",
+    "description": "Save and restore window layouts for Obsidian popout windows. Seamlessly manage multi-window popout workspaces. - This plugin has not been manually reviewed by Obsidian staff.",
+    "repo": "edwardsayer/obsidian-window-spaces"
   },
   {
     "id": "anki-cloze-sync",
@@ -43369,7 +43481,7 @@
     "name": "Azure Wiki Preview",
     "author": "Harshit Singhal",
     "description": "Preview Azure DevOps Wiki pages as they will publish: :::mermaid diagrams, table of contents macros, and decoded page names. - This plugin has not been manually reviewed by Obsidian staff.",
-    "repo": "harshitsnghl/obsidian-azure-wiki-preview"
+    "repo": "dwayne-singhal/obsidian-azure-wiki-preview"
   },
   {
     "id": "bullet-journal",
@@ -43643,13 +43755,6 @@
     "author": "David Cohen-Tanugi",
     "description": "A distraction-free writing mode that promotes flow and focus. Everything already written dims away, only the word you are typing stays lit, and finished words cannot be edited. - This plugin has not been manually reviewed by Obsidian staff.",
     "repo": "dctanugi/obsidian-flow-writer"
-  },
-  {
-    "id": "meta-quest-sync",
-    "name": "Meta Quest Sync",
-    "author": "Elioenai Siqueira Costa",
-    "description": "Starts and pairs the WebXR viewer to explore the vault in augmented reality. - This plugin has not been manually reviewed by Obsidian staff.",
-    "repo": "nelscost/meta-quest-sync"
   },
   {
     "id": "tekken-code-image",
@@ -44173,7 +44278,7 @@
     "id": "vault-orrery",
     "name": "Vault Orrery",
     "author": "Elliott Park",
-    "description": "Fly through your vault as a star system — a 3D graph with a spaceship, a surface mode and a formation timeline. Runs entirely offline. - This plugin has not been manually reviewed by Obsidian staff.",
+    "description": "Folders become stars, notes orbit them, cited sources become moons. Replay how the vault formed, open any note from orbit, map its neighbours. No network access at all. - This plugin has not been manually reviewed by Obsidian staff.",
     "repo": "elliott-json-park/obsidian-vault-orrery"
   },
   {
@@ -44765,6 +44870,13 @@
     "repo": "k2ak3n/noesis-flow"
   },
   {
+    "id": "gitee-sync-plus",
+    "name": "Gitee Sync Plus",
+    "author": "hellokunzai",
+    "description": "Sync your vault to a Gitee or GitHub repository. - This plugin has not been manually reviewed by Obsidian staff.",
+    "repo": "hellokunzai/obsidian-gitee-sync-plus"
+  },
+  {
     "id": "knforge",
     "name": "KnForge",
     "author": "Hubert Kuo",
@@ -44905,6 +45017,13 @@
     "repo": "dotknewt/bonsai-almanac"
   },
   {
+    "id": "link-integrity",
+    "name": "Link Integrity",
+    "author": "ZhengYX",
+    "description": "Continuously find broken internal links and isolated files across your Vault. - This plugin has not been manually reviewed by Obsidian staff.",
+    "repo": "zhyx91/obsidian-link-integrity"
+  },
+  {
     "id": "html-table-toolbar",
     "name": "HTML Table Toolbar",
     "author": "Charette-AI-Group",
@@ -44945,13 +45064,6 @@
     "author": "Jason Quesada Gomez",
     "description": "Consolidate a vault or folder into structured Markdown optimized for AI. - This plugin has not been manually reviewed by Obsidian staff.",
     "repo": "jasonqg26/Nux-Exporter"
-  },
-  {
-    "id": "starlightv-codetime",
-    "name": "Codetime",
-    "author": "StarlightV",
-    "description": "This is a plugin that integrates with CodeTime.dev to track your writing activity. This is not made by or affiliated with codetime.dev. - This plugin has not been manually reviewed by Obsidian staff.",
-    "repo": "starlightv-org/obsidian-codetime"
   },
   {
     "id": "compact-pinned-tabs",
@@ -45189,7 +45301,7 @@
     "name": "Native Terminal Here",
     "author": "Ethan Fu",
     "description": "Open PowerShell 7+ at the vault root or any folder (Windows only). - This plugin has not been manually reviewed by Obsidian staff.",
-    "repo": "ethanffu/open-powershell-here"
+    "repo": "upand0wn/open-powershell-here"
   },
   {
     "id": "unlink-on-delete",
@@ -45223,7 +45335,7 @@
     "id": "table-csv",
     "name": "TableCSV",
     "author": "k-tech-studio",
-    "description": "Open CSV files as tables. View with a text filter, edit cells, and copy or paste via the system clipboard. - This plugin has not been manually reviewed by Obsidian staff.",
+    "description": "Open CSV as tables. Create a CSV from a folder. Filter and sort without changing the file. Pin last row or first column. Copy, cut, or clear a range. Paste from Excel. Export filtered rows. Offline. - This plugin has not been manually reviewed by Obsidian staff.",
     "repo": "crossbeat461-a11y/table-csv"
   },
   {
@@ -46056,7 +46168,7 @@
     "id": "amoeba",
     "name": "Amoeba",
     "author": "Gregory Manni",
-    "description": "Adds a living organism to Graph view. The \"Amoeba\" grabs on to your notes as it moves around the global graph, creating a unique dynamic visual. It can scan your vault for broken links too. - This plugin has not been manually reviewed by Obsidian staff.",
+    "description": "Adds a living organism to Graph view. The \"Amoeba\" interacts with your notes as it moves around the global graph, creating a unique dynamic visual. - This plugin has not been manually reviewed by Obsidian staff.",
     "repo": "gregorymanni/Amoeba"
   },
   {
@@ -46452,6 +46564,13 @@
     "repo": "tudo9710/obsidian-dsh"
   },
   {
+    "id": "smart-notes",
+    "name": "Smart Notes",
+    "author": "hellokunzai",
+    "description": "Analyze your vault with AI to generate bidirectional links, enrich frontmatter properties, optimize notes, and provide in-editor autocompletion. - This plugin has not been manually reviewed by Obsidian staff.",
+    "repo": "hellokunzai/obsidian-smart-notes"
+  },
+  {
     "id": "canvas-to-tasks",
     "name": "Canvas to Tasks",
     "author": "Ryan",
@@ -46730,6 +46849,13 @@
     "author": "Peter Frost",
     "description": "A 3D graph view of your vault. Orbit, filter, group and freeze — with the same filters, groups, display and force controls as the core graph. - This plugin has not been manually reviewed by Obsidian staff.",
     "repo": "duskengservices/obsidian-armillary"
+  },
+  {
+    "id": "inline-handwriting-puria",
+    "name": "Inline Handwriting",
+    "author": "puria",
+    "description": "Write and edit handwriting directly inside an Obsidian note. - This plugin has not been manually reviewed by Obsidian staff.",
+    "repo": "puriakazemieh/obsidian-inline-handwriting"
   },
   {
     "id": "vault-ai-chat",
@@ -47344,7 +47470,7 @@
     "id": "goodcharts",
     "name": "GoodCharts",
     "author": "Times",
-    "description": "Render simple, theme-aware charts from YAML using TanStack Charts. - This plugin has not been manually reviewed by Obsidian staff.",
+    "description": "Render simple, theme-aware good charts from YAML using TanStack Charts. - This plugin has not been manually reviewed by Obsidian staff.",
     "repo": "times0/good-charts"
   },
   {
@@ -47607,6 +47733,13 @@
     "repo": "n23eos/obsidian-vault-sunburst"
   },
   {
+    "id": "re-supercharged-links",
+    "name": "Re-supercharged Links",
+    "author": "Carl Bechstrom",
+    "description": "continued development & fixes for The original Obsidian Supercarged Links, by mdelobelle & Emile - This plugin has not been manually reviewed by Obsidian staff.",
+    "repo": "carlb01/re-supercharged-links"
+  },
+  {
     "id": "local-agent-assistant",
     "name": "Local Agent Assistant",
     "author": "zero",
@@ -47654,13 +47787,6 @@
     "author": "Jiajun Song",
     "description": "On macOS, record microphone audio to your vault, transcribe it locally with your own Whisper CLI, and create source-linked Markdown notes with optional Codex summaries. - This plugin has not been manually reviewed by Obsidian staff.",
     "repo": "songjiajun0209-byte/recording-minutes"
-  },
-  {
-    "id": "ai-scheduler",
-    "name": "AI Scheduler",
-    "author": "Rachit Asthana",
-    "description": "Autonomous AI assistant layer for Claudian with AI planning, scheduled work, self-talk, nightly vault reviews, and notifications. - This plugin has not been manually reviewed by Obsidian staff.",
-    "repo": "racstan/obsidian-ai-scheduler"
   },
   {
     "id": "ebbinghaus-review",
@@ -47999,13 +48125,6 @@
     "repo": "charlesxiaomi/claudian-mobile"
   },
   {
-    "id": "zerocloud-notes",
-    "name": "Link to Notes",
-    "author": "skylines010101",
-    "description": "Clip Xiaohongshu, Bilibili, and web articles into local Markdown notes — 100% offline, zero API cost. - This plugin has not been manually reviewed by Obsidian staff.",
-    "repo": "lamvanbien65-crypto/obsidian-zerocloud-notes"
-  },
-  {
     "id": "explorer-icon-studio",
     "name": "Explorer Icon Studio",
     "author": "SpZyph3r",
@@ -48074,6 +48193,13 @@
     "author": "LinYun",
     "description": "在 Obsidian 中记录日记并发布到 flomo、Telegram、Mastodon、Misskey 和 Notion，无需额外后端服务。 - This plugin has not been manually reviewed by Obsidian staff.",
     "repo": "linyunerr/Journal-Sync"
+  },
+  {
+    "id": "creative-writer",
+    "name": "Creative Writer",
+    "author": "André Amnc",
+    "description": "Zen Mode, typewriter scrolling, focus fade, paragraph rhythm and offline style checks for creative writing. Optional local-model assistant. - This plugin has not been manually reviewed by Obsidian staff.",
+    "repo": "amancioandre/creative-writer"
   },
   {
     "id": "webview-ua-override",
@@ -48193,13 +48319,6 @@
     "author": "Losk",
     "description": "Slides mode for deck notes: an immersive, editable card view with a slides bar for properties and PPT-style navigation, driven by one deck property. - This plugin has not been manually reviewed by Obsidian staff.",
     "repo": "l05k/obsidian-native-slides"
-  },
-  {
-    "id": "the-mind-map",
-    "name": "The Mind Map",
-    "author": "冬季蚊子",
-    "description": "在 Obsidian 中创建和编辑专业思维导图，六种布局、节点搜索、拖拽排序、右键菜单、Obsidian 内部链接（[[笔记名]]、文件拖拽、反向链接）、附件拖入导入（遵循附件存放位置设置）、图片统一尺寸、自动整理、性能模式、JSON/PNG/Markdown 导入导出。基于 simple-mind-map 引擎。 - This plugin has not been manually reviewed by Obsidian staff.",
-    "repo": "wintermosquito/the-mind-map"
   },
   {
     "id": "dnd-charactersheet",
@@ -48335,13 +48454,6 @@
     "repo": "codyhp/obstracker"
   },
   {
-    "id": "snapshot-sync",
-    "name": "Snapshot Sync",
-    "author": "chiahsien",
-    "description": "Remote-first Git sync for vaults. Keeps history shallow by design. - This plugin has not been manually reviewed by Obsidian staff.",
-    "repo": "chiahsien/obsidian-snapshot-sync"
-  },
-  {
     "id": "fleurdict",
     "name": "FleurDict",
     "author": "JC5",
@@ -48398,11 +48510,25 @@
     "repo": "joahyi-ai/WeChat-Publish-Preview"
   },
   {
+    "id": "structural-tables",
+    "name": "Structural Tables",
+    "author": "ZhengYX",
+    "description": "Merged cells, multi-row headers, and row headers for readable Markdown tables. - This plugin has not been manually reviewed by Obsidian staff.",
+    "repo": "zhyx91/obsidian-structural-tables"
+  },
+  {
     "id": "homepage-dashboard",
     "name": "Homepage Dashboard",
     "author": "pengze",
     "description": "A theme-aware homepage with reorderable widgets for notes, tasks, journals, and projects. - This plugin has not been manually reviewed by Obsidian staff.",
     "repo": "pengze369-stack/homepage-dashboard"
+  },
+  {
+    "id": "number-suite",
+    "name": "Number Suite",
+    "author": "ZhengYX",
+    "description": "Display or manage heading, caption, footnote, endnote, and reference numbers without changing Markdown unexpectedly. - This plugin has not been manually reviewed by Obsidian staff.",
+    "repo": "zhyx91/obsidian-number-suite"
   },
   {
     "id": "github-image-host",
@@ -48643,6 +48769,13 @@
     "repo": "accessiblefish/obsidian-nautilus-log"
   },
   {
+    "id": "vault-dashboard-x",
+    "name": "Vault Dashboard X",
+    "author": "shayherchen",
+    "description": "A vault dashboard with an activity heatmap, folder distribution, and configurable visual-folder quick links. - This plugin has not been manually reviewed by Obsidian staff.",
+    "repo": "shayher5525/obsidian-vault-dashboard"
+  },
+  {
     "id": "chemspec",
     "name": "ChemSpec",
     "author": "Ruzal Sitdikov",
@@ -48732,6 +48865,13 @@
     "author": "Beth Dean",
     "description": "Export a story to Shunn's standard manuscript format as a .docx or .rtf, ready to submit. - This plugin has not been manually reviewed by Obsidian staff.",
     "repo": "hexennacht666/obsidian-standard-manuscript-format"
+  },
+  {
+    "id": "auto-webp-image-manager",
+    "name": "Auto WebP Image Manager",
+    "author": "gmsz-1603",
+    "description": "粘贴/拖拽图片自动保存为WebP（质量75%、可缩放），按笔记名自动命名，笔记重命名时图片同步重命名。 - This plugin has not been manually reviewed by Obsidian staff.",
+    "repo": "gmsz-1603/obsidian-auto-webp-image-manager"
   },
   {
     "id": "ugougo-moji",
@@ -49413,6 +49553,13 @@
     "repo": "yunyan-he/obsidian-feynman"
   },
   {
+    "id": "link-hover-reveal",
+    "name": "Link Hover Reveal",
+    "author": "Mat Paradela",
+    "description": "Keeps markdown links collapsed to just their title in Live Preview, so arrowing between lines doesn't expand them. Only reveals the raw [text](url) when the cursor is placed strictly inside it. - This plugin has not been manually reviewed by Obsidian staff.",
+    "repo": "mat-paradela/link-hover-reveal"
+  },
+  {
     "id": "codex-share",
     "name": "Codex Share",
     "author": "ctrlvish",
@@ -49446,6 +49593,13 @@
     "author": "多多",
     "description": "为中文长文提供多主题纸张、自定义背景、高级文本整理和多格式导出. - This plugin has not been manually reviewed by Obsidian staff.",
     "repo": "idoncar2/chinese-writing-layout"
+  },
+  {
+    "id": "outcrop",
+    "name": "Outcrop",
+    "author": "Sanket Saurav",
+    "description": "Share individual notes publicly on your own domain via a self-hosted Outcrop server. - This plugin has not been manually reviewed by Obsidian staff.",
+    "repo": "sanketsaurav/outcrop"
   },
   {
     "id": "grimmory-sync",
@@ -49486,7 +49640,7 @@
     "id": "articlewriter",
     "name": "ArticleWriter",
     "author": "天天",
-    "description": "AI 小说创作工具（Obsidian 版）：建书/建章/建卷、打开文档、保存章节、字数统计，全部基于 Vault MD 文档约定，手动下载写作指南定义个人风格 - This plugin has not been manually reviewed by Obsidian staff.",
+    "description": "AI 小说创作工具（Obsidian 版）：建书/建章/建卷、打开文档、保存章节、字数统计，全部基于 Vault MD 文档约定，增加使用说明，增加写作指南的生成，更新章节管理功能，增加书籍磁盘同步功能 - This plugin has not been manually reviewed by Obsidian staff.",
     "repo": "gengbl/articlewriter-obsidian"
   },
   {
@@ -49563,7 +49717,7 @@
     "id": "explorer-categories",
     "name": "Explorer Categories",
     "author": "ARPMAN",
-    "description": "Assign categories to folders and color the file explorer by category. A category carries the color, the marker and the icon, and every folder in it follows. - This plugin has not been manually reviewed by Obsidian staff.",
+    "description": "Assign categories to folders and files, and color the file explorer by category. A category carries the color, the marker and the icon, and everything in it follows. - This plugin has not been manually reviewed by Obsidian staff.",
     "repo": "jdaehler/explorer-categories"
   },
   {
@@ -49584,14 +49738,14 @@
     "id": "position-restore",
     "name": "Position Restore",
     "author": "kaidima",
-    "description": "Restore each note's cursor and scroll position across sessions and devices, in both editing and reading view, with flicker-free native recovery in the editor - This plugin has not been manually reviewed by Obsidian staff.",
+    "description": "Restore cursor and scroll position for each note across sessions and devices — exact landing, no jump. An optimized alternative to Remember Cursor Position. - This plugin has not been manually reviewed by Obsidian staff.",
     "repo": "aisahpa/obsidian-position-restore"
   },
   {
     "id": "digent-view",
     "name": "Digent View",
     "author": "hua yang",
-    "description": "你的笔记库，就是一颗数智体的大脑。Your notes. A Digent's brain.3D Brain.VR/AR Noda Quest3 - This plugin has not been manually reviewed by Obsidian staff.",
+    "description": "你的笔记库，就是一颗数智体（Digent）的大脑。Your notes. A Digent's brain. 3D Brain. VR/AR Noda Quest3，Digent DNA - This plugin has not been manually reviewed by Obsidian staff.",
     "repo": "yanghuaqlx/digent-view"
   },
   {
@@ -49693,13 +49847,6 @@
     "repo": "myicor/icor-for-life-focus"
   },
   {
-    "id": "icor-for-life-diagrams",
-    "name": "ICOR for Life - Diagrams",
-    "author": "Paperless Movement S.L.",
-    "description": "Adds a fullscreen button to every rendered mermaid diagram: open it large, zoom around the cursor with the mouse wheel or a pinch, drag to pan, double-click to reset. Part of the ICOR for Life suite. - This plugin has not been manually reviewed by Obsidian staff.",
-    "repo": "myicor/icor-for-life-diagrams"
-  },
-  {
     "id": "icor-for-life-connect",
     "name": "ICOR for Life - Connect",
     "author": "Paperless Movement S.L.",
@@ -49764,7 +49911,7 @@
   },
   {
     "id": "shadow-dark",
-    "name": "ShadowDark",
+    "name": "Shadowdark Tools",
     "author": "Luis Vierroth",
     "description": "An expansive toolkit for Shadowdark GMs - This plugin has not been manually reviewed by Obsidian staff.",
     "repo": "p-mercury/obsidian-shadow-dark"
@@ -49840,6 +49987,13 @@
     "repo": "liert/protocol-structure-viewer"
   },
   {
+    "id": "github-page",
+    "name": "GitHubPage",
+    "author": "cosmosmount",
+    "description": "Edit a GitHub Pages vault natively, preview it with the production renderer, and collaborate through Git. - This plugin has not been manually reviewed by Obsidian staff.",
+    "repo": "cosmosmount/obsidian-githubpage"
+  },
+  {
     "id": "ai-bridge",
     "name": "Context Anywhere AI Bridge",
     "author": "uid21",
@@ -49889,15 +50043,8 @@
     "repo": "n23eos/obsidian-always-on-top-tasks"
   },
   {
-    "id": "wiki-companion",
-    "name": "Wiki Companion",
-    "author": "Mo A",
-    "description": "A calendar, task board, reminders and time tracker built for my own wiki-style vault — plain tags and dates, no new format to learn. Sharing it as-is in case it's useful to you too. - This plugin has not been manually reviewed by Obsidian staff.",
-    "repo": "cityplannermo/companion"
-  },
-  {
     "id": "communitynoteshub",
-    "name": "notes-hub",
+    "name": "Notes hub",
     "author": "adi gorn",
     "description": "Browse, download, and publish knowledge packages shared by the community. - This plugin has not been manually reviewed by Obsidian staff.",
     "repo": "s-t-i-h-i/notesHub-plugin"
@@ -49928,14 +50075,14 @@
     "name": "Link Calendar Navigator",
     "author": "woonyong-kr",
     "description": "Navigate dated Markdown by month and open canonical notes from a compact daily agenda. - This plugin has not been manually reviewed by Obsidian staff.",
-    "repo": "woonyong-kr/link-calendar"
+    "repo": "woonyong-kr/obsidian-link-calendar-navigator"
   },
   {
     "id": "linked-graph",
     "name": "Linked Graph Navigator",
     "author": "woonyong-kr",
     "description": "Browse the current Markdown note as an outline or one-hop graph. - This plugin has not been manually reviewed by Obsidian staff.",
-    "repo": "woonyong-kr/linked-graph"
+    "repo": "woonyong-kr/obsidian-linked-graph-navigator"
   },
   {
     "id": "kadima-sync",
@@ -49966,11 +50113,11 @@
     "repo": "danrfletcher/obsidian-not-submodules"
   },
   {
-    "id": "runnable-code-blocks",
-    "name": "Runnable Code Blocks",
-    "author": "woonyong-kr",
-    "description": "Run 21 languages inside your notes with IntelliJ-style editors and no server to host. - This plugin has not been manually reviewed by Obsidian staff.",
-    "repo": "woonyong-kr/runnable-code-blocks"
+    "id": "mengshi-workbench",
+    "name": "Mengshi Cockpit",
+    "author": "孙鹏飞",
+    "description": "猛士驾驶舱 — Calendar, Projects, Todos, Gantt, Feishu, Sessions integrated workbench - This plugin has not been manually reviewed by Obsidian staff.",
+    "repo": "spenf710/obsidian-mengshi-cockpit"
   },
   {
     "id": "inline-agents",
@@ -49985,6 +50132,13 @@
     "author": "shangxin",
     "description": "Agentic AI side panel that edits your vault, delegates to subagents, and suggests what to ask next. - This plugin has not been manually reviewed by Obsidian staff.",
     "repo": "youngsx/piem"
+  },
+  {
+    "id": "office-suite",
+    "name": "Office Suite",
+    "author": "Vishal Rashmika",
+    "description": "View and edit Microsoft Word (.docx), Excel (.xlsx), and CSV/TSV spreadsheet files directly inside Obsidian with native WYSIWYG editing, formatting, and formulas. - This plugin has not been manually reviewed by Obsidian staff.",
+    "repo": "vishalrashmika/office-suite"
   },
   {
     "id": "dgs-wechat-publisher",
@@ -50071,6 +50225,13 @@
     "repo": "normanchine/obsidian-japanese-reading-assistant"
   },
   {
+    "id": "markdown-memos",
+    "name": "Markdown Memos",
+    "author": "王小",
+    "description": "Capture one memo per Markdown file in an Obsidian-native timeline. - This plugin has not been manually reviewed by Obsidian staff.",
+    "repo": "tyh-art/markdown-memos"
+  },
+  {
     "id": "hans-safedoc",
     "name": "Hans SafeDoc",
     "author": "Hans Lin 林思翰",
@@ -50088,7 +50249,7 @@
     "id": "immersive-folder",
     "name": "Immersive Folder",
     "author": "Blink",
-    "description": "Keeps the folder you are working in readable and covers every other file and folder with skeleton bars. - This plugin has not been manually reviewed by Obsidian staff.",
+    "description": "One click hides everything but the folder you're working in. Drag folders into your own order instead of naming them 01_Inbox, 02_Projects to line them up. - This plugin has not been manually reviewed by Obsidian staff.",
     "repo": "iblinkq/immersive-folder"
   },
   {
@@ -50228,7 +50389,7 @@
     "id": "shorthand",
     "name": "Shorthand",
     "author": "Horizon Vector",
-    "description": "Capture Shorthand transcripts and maintain an AI-owned meeting-note summary. - This plugin has not been manually reviewed by Obsidian staff.",
+    "description": "AI meeting notes and personal note taking using your existing AI subscription (ChatGPT, Claude, or Cursor). - This plugin has not been manually reviewed by Obsidian staff.",
     "repo": "mshish/shorthand-obsidian-plugin"
   },
   {
@@ -50244,6 +50405,13 @@
     "author": "Aristarkh Khalmirzaev",
     "description": "Переводит выделенный текст из латиницы в кириллицу (и обратно) — исправляет «слепую» печать на неправильной раскладке. - This plugin has not been manually reviewed by Obsidian staff.",
     "repo": "arigurj/obsidian-english-to-russian-layot-switcher"
+  },
+  {
+    "id": "quran-key",
+    "name": "Quran Key",
+    "author": "Mohamed Saleh",
+    "description": "Contextual Quran extraction, snippet trimming, and multi-source tafsir lookup for Obsidian — fully re-architected for customizability. - This plugin has not been manually reviewed by Obsidian staff.",
+    "repo": "mohamedsaleh0-0/quran-key"
   },
   {
     "id": "html-document-viewer",
@@ -50295,6 +50463,13 @@
     "repo": "techne-tools/enodios"
   },
   {
+    "id": "rosary",
+    "name": "Daily Rosary",
+    "author": "squigglbunny",
+    "description": "Opens Today's Rosary. - This plugin has not been manually reviewed by Obsidian staff.",
+    "repo": "squigglbunny/obsidian-rosary"
+  },
+  {
     "id": "filen-cloud-sync",
     "name": "Filen Cloud Sync",
     "author": "Real-Fruit-Snacks",
@@ -50337,6 +50512,13 @@
     "repo": "moodstudios/moodstudios-collab-dist"
   },
   {
+    "id": "local-pi-chat",
+    "name": "Pi Chat",
+    "author": "acewan",
+    "description": "Chat with your local pi coding agent. Pi runs on your machine; this plugin provides the UI and exposes your vault over a local HTTP endpoint so pi can read it via curl. - This plugin has not been manually reviewed by Obsidian staff.",
+    "repo": "acewan-kai/obsidian-pi-chat"
+  },
+  {
     "id": "ai-agent-panel",
     "name": "AI Agent Panel",
     "author": "Yoav Aharoni",
@@ -50351,18 +50533,18 @@
     "repo": "crossbeat461-a11y/tidy-paste"
   },
   {
+    "id": "fitkit",
+    "name": "FitKit",
+    "author": "Paul Chiu",
+    "description": "Track workouts, exercises, weights, sets. Supports resistence and duration based exercises. Consolidated into dashboard and per-exercise trend charts. - This plugin has not been manually reviewed by Obsidian staff.",
+    "repo": "paulchiu/obsidian-fitkit"
+  },
+  {
     "id": "html-gallery",
     "name": "HTML Gallery",
     "author": "kagayakii",
     "description": "Browse HTML files in your vault as a grid of live thumbnails, search them by title and content, and open the notes that link to them. - This plugin has not been manually reviewed by Obsidian staff.",
     "repo": "violetyk/obsidian-html-gallery"
-  },
-  {
-    "id": "orphan-cleaner",
-    "name": "Orphan Cleaner",
-    "author": "trbatukim",
-    "description": "Finds and deletes orphan nodes. - This plugin has not been manually reviewed by Obsidian staff.",
-    "repo": "trbatukim/obsidian-orphan-cleaner"
   },
   {
     "id": "image-scroll-gallery",
@@ -50380,7 +50562,7 @@
   },
   {
     "id": "file-folder-status-icons",
-    "name": "File and Folder Status Icons",
+    "name": "File Folder Status Sets",
     "author": "Dan",
     "description": "Traffic-light style status icons for files and folders in the file tree, with custom statuses, per-folder defaults, and persistent sort/group by status. - This plugin has not been manually reviewed by Obsidian staff.",
     "repo": "danrfletcher/obsidian-file-folder-status-icons"
@@ -50463,10 +50645,1032 @@
     "repo": "real-fruit-snacks/obsidian-linkhaven"
   },
   {
-    "id": "custom-syntax",
-    "name": "Custom Syntax",
-    "author": "BAIYUMIAN",
-    "description": "Define custom inline syntax delimiters and style them with your own CSS, with native real-time preview. - This plugin has not been manually reviewed by Obsidian staff.",
-    "repo": "baiyumian/obsidian-custom-syntax"
+    "id": "nvc-toolkit",
+    "name": "Giraffe",
+    "author": "Justin Magaram",
+    "description": "Insert feelings and needs into your notes. Scan by category (Angry, Sad… Connection, Play…) or focus on one word at a time, with definitions. Based on Center for Nonviolent Communication (NVC) lists. - This plugin has not been manually reviewed by Obsidian staff.",
+    "repo": "jmagaram/nvc-obsidian"
+  },
+  {
+    "id": "sentence-capitalizer",
+    "name": "Sentence Capitalizer",
+    "author": "kosperun",
+    "description": "Auto-capitalizes the first letter you type at the start of a sentence, undoes cleanly with Cmd/Ctrl+Z - This plugin has not been manually reviewed by Obsidian staff.",
+    "repo": "kosperun/obsidian-sentence-capitalizer"
+  },
+  {
+    "id": "tally",
+    "name": "Tally",
+    "author": "Liam Gour",
+    "description": "Track daily habits from your notes. Reads and writes plain frontmatter and Dataview inline fields, draws a year heatmap and streaks, and is built to be tapped one-handed on a phone. - This plugin has not been manually reviewed by Obsidian staff.",
+    "repo": "virus7976/2026-09-02_school_habit-tracker_v1"
+  },
+  {
+    "id": "obelisk",
+    "name": "Obelisk",
+    "author": "Zach Hannum",
+    "description": "Comment on any passage in a note and propose GitHub-style suggested edits. Comments live in the note's frontmatter, so they travel with the file. - This plugin has not been manually reviewed by Obsidian staff.",
+    "repo": "zachhannum/obelisk"
+  },
+  {
+    "id": "youspot",
+    "name": "YouSpot",
+    "author": "YouSpot",
+    "description": "Two-way sync between a vault folder and your YouSpot Brain. - This plugin has not been manually reviewed by Obsidian staff.",
+    "repo": "onstartups/youspot-obsidian"
+  },
+  {
+    "id": "terminalogue",
+    "name": "Terminalogue",
+    "author": "Yuichi Mizutani",
+    "description": "Turns termlogue code blocks into animated terminal sessions. Commands are never executed. - This plugin has not been manually reviewed by Obsidian staff.",
+    "repo": "yumizu11/Terminalogue"
+  },
+  {
+    "id": "month-finance",
+    "name": "Month Finance",
+    "author": "Kiryl Harbacheuski",
+    "description": "Track month income and expenses in a markdown table: balance, spending charts by category and a summary dashboard. - This plugin has not been manually reviewed by Obsidian staff.",
+    "repo": "kharbacheuski/obsidian-month-finance"
+  },
+  {
+    "id": "klomimory",
+    "name": "Klomimory Word Cards",
+    "author": "klomix",
+    "description": "Plugin for learning words in the format: Word - [Transcription] - Translation - This plugin has not been manually reviewed by Obsidian staff.",
+    "repo": "klomix/Klomimory"
+  },
+  {
+    "id": "terminalogue-presenter",
+    "name": "Terminalogue Presenter",
+    "author": "Yuichi Mizutani",
+    "description": "Turns a Marp note into an HTML presentation with animated Terminalogue terminals, and opens it in the default browser. - This plugin has not been manually reviewed by Obsidian staff.",
+    "repo": "yumizu11/obsidian-terminalogue-presenter"
+  },
+  {
+    "id": "image-annotator",
+    "name": "Image Annotator",
+    "author": "Adlin",
+    "description": "Annotate images in your vault with rectangles, arrows, text, and freehand marks, then save the result as a PNG. - This plugin has not been manually reviewed by Obsidian staff.",
+    "repo": "adlinz/obsidian-image-annotator"
+  },
+  {
+    "id": "ltoolkit",
+    "name": "LToolkit",
+    "author": "lee112358",
+    "description": "A bundle of small editing, attachment, and appearance tweaks: Notion-style progressive select, per-note attachment folders, unused-attachment cleanup, filenames on code blocks, and scroll position memory. Each feature toggles on its own. - This plugin has not been manually reviewed by Obsidian staff.",
+    "repo": "lee112358/ltoolkit"
+  },
+  {
+    "id": "loud-outline",
+    "name": "Loud Outline",
+    "author": "Dan",
+    "description": "Like Quiet Outline, but louder! Shows each note's headings, tasks and lists as expandable nodes right in the file explorer — no separate outline pane needed. - This plugin has not been manually reviewed by Obsidian staff.",
+    "repo": "danrfletcher/obsidian-loud-outline"
+  },
+  {
+    "id": "tab-cleaner",
+    "name": "Tab Cleaner",
+    "author": "caijyii",
+    "description": "Visually find, review, and safely close groups of Obsidian tabs. - This plugin has not been manually reviewed by Obsidian staff.",
+    "repo": "caijyii/obsidian-tab-cleaner"
+  },
+  {
+    "id": "happy-squid",
+    "name": "Happy Squid",
+    "author": "Happy Squid",
+    "description": "Start and stop Happy Squid tasks from checkboxes in your notes, and keep permanent records of your task goals and daily summaries. - This plugin has not been manually reviewed by Obsidian staff.",
+    "repo": "happy-squid-blocker/obsidian-happy-squid"
+  },
+  {
+    "id": "rollover-plus",
+    "name": "Rollover Plus",
+    "author": "Wren",
+    "description": "Rolls unfinished tasks to today or tomorrow, or moves the current selection to tomorrow. Based on Rollover Daily Todos by lumoe. - This plugin has not been manually reviewed by Obsidian staff.",
+    "repo": "turnipsforme/rollover-plus"
+  },
+  {
+    "id": "fast-external-embed",
+    "name": "Fast External Embed",
+    "author": "imAndyrrr",
+    "description": "Embed external web pages and local files with standard Markdown and wiki embed syntax - This plugin has not been manually reviewed by Obsidian staff.",
+    "repo": "imandyrrr/obsidian-fast-external-embed"
+  },
+  {
+    "id": "better-editor",
+    "name": "Better Editor",
+    "author": "Wren",
+    "description": "Improve editing with tools for organizing notes, formatting selections, managing tasks and tabs, and safely deleting linked files. - This plugin has not been manually reviewed by Obsidian staff.",
+    "repo": "turnipsforme/better-editor"
+  },
+  {
+    "id": "team-relay",
+    "name": "Team Relay",
+    "author": "Entire VC",
+    "description": "Enterprise collaboration with self-hosted relay infrastructure. Real-time editing with live cursors and secure team workspaces. - This plugin has not been manually reviewed by Obsidian staff.",
+    "repo": "entire-vc/evc-team-relay-plugin"
+  },
+  {
+    "id": "hybrid-chat",
+    "name": "Hybrid Chat",
+    "author": "Jens Mittelbach",
+    "description": "Federated, provider-neutral RAG chat over existing Obsidian Hybrid Search MCP services. - This plugin has not been manually reviewed by Obsidian staff.",
+    "repo": "jmiba/obsidian-hybrid-chat"
+  },
+  {
+    "id": "claudian-wechat",
+    "name": "Claudian WeChat Bridge",
+    "author": "xsvm",
+    "description": "Drive your Obsidian Claudian AI coding agent from WeChat. Chat, send images, switch sessions, run slash commands, and mirror desktop turns to mobile. - This plugin has not been manually reviewed by Obsidian staff.",
+    "repo": "xsvm/obsidian-claudian-wechat"
+  },
+  {
+    "id": "cairn",
+    "name": "Cairn",
+    "author": "cyrill",
+    "description": "Collect TODO markers from your vault in a sidebar. - This plugin has not been manually reviewed by Obsidian staff.",
+    "repo": "cyrill0/obsidian-cairn"
+  },
+  {
+    "id": "scrollstream",
+    "name": "ScrollStream",
+    "author": "Theo Tatsuyama",
+    "description": "Notes stream in tandem with relevant chapters as you read your document. - This plugin has not been manually reviewed by Obsidian staff.",
+    "repo": "midorinohoshi/scrollstream-obsidian"
+  },
+  {
+    "id": "remove-empty-assets",
+    "name": "Remove Empty Assets",
+    "author": "xzhi",
+    "description": "中文: 删除附件目录中的空目录，支持桌面端与移动端。附件目录路径支持绝对路径、相对每个笔记目录（./）、相对仓库根三种写法；删除 md 笔记或附件时自动定点扫描，支持定时扫描，删除方式可选回收站或永久删除，中英文界面 | EN: Remove empty folders inside attachment directories, desktop & mobile. Configurable path (absolute, per-note, vault-root), auto-scan on note/attachment deletion, scheduled scan, trash/permanent delete, bilingual UI. - This plugin has not been manually reviewed by Obsidian staff.",
+    "repo": "github-xzhi/obsidian-remove-empty-assets"
+  },
+  {
+    "id": "seeker",
+    "name": "Seeker",
+    "author": "Nickolay Kondratyev",
+    "description": "Search your vault (Notes, Canvas, Images) with hybrid semantic and lexical retrieval, powered by an on-device embedding model. - This plugin has not been manually reviewed by Obsidian staff.",
+    "repo": "nickolay-kondratyev/Obsidian-Seeker"
+  },
+  {
+    "id": "tree-view",
+    "name": "Tree View",
+    "author": "Jesse",
+    "description": "Create multiple editable file-explorer views that reference the vault's real file tree, without altering it. - This plugin has not been manually reviewed by Obsidian staff.",
+    "repo": "biehenjia/tv"
+  },
+  {
+    "id": "scribe-of-lagash-visualization",
+    "name": "Scribe of Lagash - Visualization",
+    "author": "Alejandro",
+    "description": "Visualize your novel: arrange chapters and scenes as cards on colored story lines, and plan ahead with an outline whose rows become real notes. - This plugin has not been manually reviewed by Obsidian staff.",
+    "repo": "aescanes/scribe-of-lagash-visualization"
+  },
+  {
+    "id": "uzbek-script-switcher",
+    "name": "Uzbek Script Switcher",
+    "author": "Aristarkh Khalmirzaev",
+    "description": "Converts selected text between Uzbek Latin and Cyrillic scripts — fixes wrong script with one click. - This plugin has not been manually reviewed by Obsidian staff.",
+    "repo": "arigurj/obsidian-uzbek-script-switcher"
+  },
+  {
+    "id": "makespdf",
+    "name": "MakesPDF",
+    "author": "makesPDF",
+    "description": "Export notes to accessible, archival-quality PDFs (PDF/A-2A and PDF/UA-1) using the makespdf.com API. - This plugin has not been manually reviewed by Obsidian staff.",
+    "repo": "makespdf/makespdf-obsidian-plugin"
+  },
+  {
+    "id": "highlight-migrator",
+    "name": "Highlight Migrator",
+    "author": "Grub Basket",
+    "description": "Scan legacy HTML highlights, map each colour to a native highlight colour, back up affected notes, then convert them — with full revert. - This plugin has not been manually reviewed by Obsidian staff.",
+    "repo": "grub-basket/Highlight-Migrator"
+  },
+  {
+    "id": "askmyu",
+    "name": "askMyu",
+    "author": "askMyu",
+    "description": "Capture your journal notes to askMyu, encrypted before they leave, and read your day beside your vault. - This plugin has not been manually reviewed by Obsidian staff.",
+    "repo": "askmyu/askmyu-obsidian-plugin"
+  },
+  {
+    "id": "ocard",
+    "name": "Ocard",
+    "author": "SouthRiver",
+    "description": "选中文字一键制卡，用精美的卡片翻阅回顾。 - This plugin has not been manually reviewed by Obsidian staff.",
+    "repo": "nanhe17/ocard"
+  },
+  {
+    "id": "math-paste-bridge",
+    "name": "Math Paste Bridge",
+    "author": "hlyang1992",
+    "description": "Convert pasted LaTeX delimiters and recover exact math source from rich text while preserving Markdown formatting. - This plugin has not been manually reviewed by Obsidian staff.",
+    "repo": "hlyang1992/math-paste-bridge"
+  },
+  {
+    "id": "release-file-publisher",
+    "name": "Release File Publisher",
+    "author": "Christina",
+    "description": "Upload files to daily GitHub Release assets and insert ready-to-use links or media players. - This plugin has not been manually reviewed by Obsidian staff.",
+    "repo": "christinahyh/Release-File-Publisher"
+  },
+  {
+    "id": "workbench-dashboard",
+    "name": "Lyra",
+    "author": "Miyoung_liu",
+    "description": "Obsidian 内打开好看的工作台：任务汇总 + 看板拖拽 + 笔记卡片墙，实时读写 - This plugin has not been manually reviewed by Obsidian staff.",
+    "repo": "miyoungliu/obsidian-workbench-dashboard"
+  },
+  {
+    "id": "rich-mindmap",
+    "name": "Rich Mindmap",
+    "author": "Younian",
+    "description": "Editable mind maps backed by plain Markdown lists — priority, progress and flag marks, drag to reorganize. - This plugin has not been manually reviewed by Obsidian staff.",
+    "repo": "younianc/obsidian-rich-mindmap"
+  },
+  {
+    "id": "onyx",
+    "name": "Onyx",
+    "author": "Jesse",
+    "description": "Edit source files with CodeMirror 6 and language servers, without leaving the app. - This plugin has not been manually reviewed by Obsidian staff.",
+    "repo": "biehenjia/onyx"
+  },
+  {
+    "id": "weekday-commands",
+    "name": "Weekday Commands",
+    "author": "Wren",
+    "description": "Adds commands for each day of the week that open or create the next matching daily note. - This plugin has not been manually reviewed by Obsidian staff.",
+    "repo": "turnipsforme/weekday-commands"
+  },
+  {
+    "id": "simple-meeting-sidebar",
+    "name": "Simple Meeting Sidebar",
+    "author": "Wren",
+    "description": "Shows today's Apple Calendar events in a simple sidebar and turns them into tasks or meeting notes. - This plugin has not been manually reviewed by Obsidian staff.",
+    "repo": "turnipsforme/simple-meeting-sidebar"
+  },
+  {
+    "id": "vivlio",
+    "name": "Vivlio",
+    "author": "nonkuri",
+    "description": "Typeset your notes with Vivliostyle (CSS paged media) and export to PDF / EPUB with a live preview. Japanese vertical writing, ruby and emphasis dots supported. - This plugin has not been manually reviewed by Obsidian staff.",
+    "repo": "nonkuri/obsidian-vivlio"
+  },
+  {
+    "id": "image-lens",
+    "name": "Image Lens",
+    "author": "lizheng",
+    "description": "Preview, zoom, pan, rotate, and download images without changing the originals. - This plugin has not been manually reviewed by Obsidian staff.",
+    "repo": "lizhengnacl/obsidian-image-lens"
+  },
+  {
+    "id": "yiji-study",
+    "name": "Yiji Study",
+    "author": "LG",
+    "description": "在手机上使用本地题库刷题，自动整理错题，并保存学习断点与统计数据. - This plugin has not been manually reviewed by Obsidian staff.",
+    "repo": "ziz-lg/yiji-study"
+  },
+  {
+    "id": "georgian-script-switcher",
+    "name": "Georgian Script Switcher",
+    "author": "Aristarkh Khalmirzaev",
+    "description": "Converts selected text between Georgian, Latin and Cyrillic scripts. - This plugin has not been manually reviewed by Obsidian staff.",
+    "repo": "arigurj/obsidian-georgian-script-switcher"
+  },
+  {
+    "id": "vision-to-canvas",
+    "name": "Vision2Canvas",
+    "author": "Jhe",
+    "description": "Convert physical handwritten notes into structured .canvas whiteboards via Vision AI. - This plugin has not been manually reviewed by Obsidian staff.",
+    "repo": "beno66edu/obsidian-vision2canvas"
+  },
+  {
+    "id": "awesome-format-bar",
+    "name": "Awesome Format Bar",
+    "author": "awesomedog",
+    "description": "A Markdown formatting bar for Obsidian. - This plugin has not been manually reviewed by Obsidian staff.",
+    "repo": "awesomedog/obsidian-awesome-format-bar"
+  },
+  {
+    "id": "aider",
+    "name": "Aider",
+    "author": "vimbackground",
+    "description": "Chat with AI models to read, write, and explore your notes with zero-config native tools and vault knowledge retrieval. - This plugin has not been manually reviewed by Obsidian staff.",
+    "repo": "vimbackground/obsidian-aider"
+  },
+  {
+    "id": "superproductivity-todo-sync",
+    "name": "SuperProductivity Todo Sync",
+    "author": "oswalt",
+    "description": "View and edit your SuperProductivity tasks via SuperProductivity's local REST API. - This plugin has not been manually reviewed by Obsidian staff.",
+    "repo": "oswaltx/obsidian-superproductivity-todo-sync"
+  },
+  {
+    "id": "conflict-resolver",
+    "name": "Conflict Resolver",
+    "author": "Anton",
+    "description": "Finds sync-conflict copies and safely resolves duplicates in your vault. - This plugin has not been manually reviewed by Obsidian staff.",
+    "repo": "toropanov/obsidian-conflict-resolver"
+  },
+  {
+    "id": "astral-trek",
+    "name": "Astra",
+    "author": "nightfall",
+    "description": "An interactive Obsidian home dashboard for tasks, knowledge graph, plugins, vault health, and writing activity. - This plugin has not been manually reviewed by Obsidian staff.",
+    "repo": "nightfall-yl/obsidian-astral-trek"
+  },
+  {
+    "id": "rowbase",
+    "name": "Rowbase",
+    "author": "soulaymane01",
+    "description": "Interactive Notion-style database for Obsidian — table, kanban, list, gallery, chart, timeline, stats, and dashboard views backed by human-readable .rbase files. Supports formulas, rollups, relations, sorting, filtering, grouping, and import/export. - This plugin has not been manually reviewed by Obsidian staff.",
+    "repo": "soulaymane01/Rowbase"
+  },
+  {
+    "id": "gitlab-mr",
+    "name": "GitLab Merge Request",
+    "author": "Ris Adams",
+    "description": "Reference GitLab merge requests inline or in code blocks and see their live status, right in your notes. - This plugin has not been manually reviewed by Obsidian staff.",
+    "repo": "risadams/obsidian-gitlab-mr"
+  },
+  {
+    "id": "post-quantum-webdav",
+    "name": "PQC WebDAV Sync",
+    "author": "obsync",
+    "description": "Encrypt your vault with post-quantum cryptography (ML-DSA/ML-KEM) and sync to any WebDAV server (Nextcloud, etc.) with chunked transfer and multi-device conflict resolution. - This plugin has not been manually reviewed by Obsidian staff.",
+    "repo": "normanify/post-quantum-webdav"
+  },
+  {
+    "id": "icor-for-life-terminal",
+    "name": "ICOR for Life - Terminal",
+    "author": "Thomas Roedl",
+    "description": "A real terminal inside your vault. Your login shell in a tab or a split, keyboard capture that still lets Obsidian keep its palette, and a one-command launcher for Claude Code in the vault folder. - This plugin has not been manually reviewed by Obsidian staff.",
+    "repo": "myicor/icor-for-life-terminal"
+  },
+  {
+    "id": "simple-backup",
+    "name": "Simple Backup",
+    "author": "Laszlo Repassy",
+    "description": "Backs up the vault to a folder of your choice, versioned by date and time, in the background without blocking the interface, with automatic daily/weekly/monthly retention. - This plugin has not been manually reviewed by Obsidian staff.",
+    "repo": "laszlorepassy/obsidian-simple-backup"
+  },
+  {
+    "id": "punctilious",
+    "name": "Punctilious",
+    "author": "bozhang",
+    "description": "统一 Markdown 标点格式：中文标点转英文标点，并在中英文与数字之间自动补空格，链接 URL 自动豁免。 - This plugin has not been manually reviewed by Obsidian staff.",
+    "repo": "mrelvin/obsidian-punctilious"
+  },
+  {
+    "id": "twenty-eight-notes-mindmap",
+    "name": "28 Notes Mind Map",
+    "author": "Shin",
+    "description": "Markdown-based Mind Maps. Al-friendly. Clean and clutter-free. - This plugin has not been manually reviewed by Obsidian staff.",
+    "repo": "ollwow/28-Notes-MindMap"
+  },
+  {
+    "id": "citation-atlas",
+    "name": "Citation Atlas",
+    "author": "Kerekes Stefan",
+    "description": "Citation-map canvas export for Zotero: pick items, collections or authors and get a drag-and-drop .canvas literature map — papers as nodes, citations as edges, collections as containers, colored by unread / read / annotated. - This plugin has not been manually reviewed by Obsidian staff.",
+    "repo": "stef4678/citation-atlas"
+  },
+  {
+    "id": "frontmatter-visibility",
+    "name": "Tidy YAML",
+    "author": "NameIsKyro",
+    "description": "Keep YAML tidy by showing, collapsing, or hiding frontmatter. - This plugin has not been manually reviewed by Obsidian staff.",
+    "repo": "nameiskyro/Tidy-YAML"
+  },
+  {
+    "id": "simple-streams",
+    "name": "Simple Streams",
+    "author": "Utku Aytaç",
+    "description": "Render a filtered, sorted stream of notes from a code block. - This plugin has not been manually reviewed by Obsidian staff.",
+    "repo": "ukaytac/obsidian-simple-streams"
+  },
+  {
+    "id": "ics-exporter",
+    "name": "Export as .ics",
+    "author": "berenluth",
+    "description": "Takes the current note and export it as a .ics file, ready to be imported in your favourite calendar app. - This plugin has not been manually reviewed by Obsidian staff.",
+    "repo": "berenluth/obsidian-ics-exporter"
+  },
+  {
+    "id": "zotero-vault-sync",
+    "name": "Zotero Vault Sync",
+    "author": "Kerekes Stefan",
+    "description": "Mirror your Zotero library into a git-versioned folder in the vault — one JSON file per item plus per-PDF annotations — synced incrementally via Zotero's local HTTP API, with regenerable notes and Dataview views that work with Zotero closed. - This plugin has not been manually reviewed by Obsidian staff.",
+    "repo": "stef4678/zotero-vault-sync"
+  },
+  {
+    "id": "uct-notebook-sync",
+    "name": "UCT Notebook Sync",
+    "author": "TSDR TRADING",
+    "description": "One-way sync of this vault's markdown notes into your UCT Intelligence Notebook (Journal 2.0). - This plugin has not been manually reviewed by Obsidian staff.",
+    "repo": "unchartedterritory5995-cyber/obsidian-uct-notebook-sync"
+  },
+  {
+    "id": "dragon-glass",
+    "name": "Dragon Glass",
+    "author": "Bryson McClung",
+    "description": "Campaign management for TTRPG vaults: a game index, campaign folders, and session notes with live history tables. - This plugin has not been manually reviewed by Obsidian staff.",
+    "repo": "bmcclung055/obsidian-dragon-glass"
+  },
+  {
+    "id": "agent-llms",
+    "name": "Agent LLMs",
+    "author": "TeiNam",
+    "description": "Agentic LLM sidebar with four backends (AWS Bedrock, Google Gemini, OpenAI, Ollama). Includes chat, Graph RAG vault search, Second Brain layer, to-do management, web clipper, and MCP server integration. - This plugin has not been manually reviewed by Obsidian staff.",
+    "repo": "teinam/obsidian-agent-llms"
+  },
+  {
+    "id": "gemma-litert-wiki",
+    "name": "Gemma 4 E4B LLM Wiki",
+    "author": "yuimorii",
+    "description": "Free local AI with Gemma 4 E4B. Turn your notes/vault into a living Karpathy LLM wiki. Chat with your vault, connect ideas, find gaps, generate quizzes & flashcards — no API key, Ollama, or server. - This plugin has not been manually reviewed by Obsidian staff.",
+    "repo": "itsyuimorii/obsidian-gemma4-litert-wiki"
+  },
+  {
+    "id": "selfgrow",
+    "name": "SelfGrow",
+    "author": "Jing",
+    "description": "Capture links, text, images, PDF, and Markdown files as local Raw cards for review and Wiki distillation. - This plugin has not been manually reviewed by Obsidian staff.",
+    "repo": "deeenia/SelfGrow"
+  },
+  {
+    "id": "ai-knowledge-workflow",
+    "name": "AI Knowledge Workflow",
+    "author": "KellyNovaX",
+    "description": "Organize project knowledge, track tasks, and prepare structured context for AI coding agents. - This plugin has not been manually reviewed by Obsidian staff.",
+    "repo": "kellynovax/ai-knowledge-workflow"
+  },
+  {
+    "id": "tc-bridge",
+    "name": "TC Bridge",
+    "author": "suavecito",
+    "description": "Companion bridge plugin for The 40 Thieves' vault-access MCP server. Extends Local REST API with command dispatch and plugin firepower bridges. - This plugin has not been manually reviewed by Obsidian staff.",
+    "repo": "the-40-thieves/obsidian-tc"
+  },
+  {
+    "id": "poppy",
+    "name": "Poppy",
+    "author": "opa-oz",
+    "description": "Poppy: A local plugin registry manager for Obsidian. Sync plugins to S3-compatible storage and restore them in other vaults. - This plugin has not been manually reviewed by Obsidian staff.",
+    "repo": "opa-oz/poppy"
+  },
+  {
+    "id": "enex-card",
+    "name": "Enex Card",
+    "author": "Kerekes Stefan",
+    "description": "Visual notes board: parse Evernote .enex exports (the same files Embeds+ previews inline) into one Obsidian canvas card per note, with images, tags, colors and notebook groups. - This plugin has not been manually reviewed by Obsidian staff.",
+    "repo": "stef4678/enex-card"
+  },
+  {
+    "id": "spot-linker",
+    "name": "Spot Linker",
+    "author": "zoupuyo",
+    "description": "On-demand highlight of vault note titles and aliases in the current note, then confirm and insert wikilinks. - This plugin has not been manually reviewed by Obsidian staff.",
+    "repo": "zoupuyo-obsidian/obsidian-spot-linker"
+  },
+  {
+    "id": "att-meta-map",
+    "name": "Att Meta Map",
+    "author": "heptazero",
+    "description": "Maps resource collections to index notes through the source property, with sidecar/folder layouts and a paired source view. - This plugin has not been manually reviewed by Obsidian staff.",
+    "repo": "heptazero/obsidian-attach-meta-map"
+  },
+  {
+    "id": "digital-rain-background",
+    "name": "Digital Rain Background",
+    "author": "Musashino Software",
+    "description": "Adds animated Matrix-style rain and adjusts your theme’s colors and transparency to match. - This plugin has not been manually reviewed by Obsidian staff.",
+    "repo": "mssoftjp/obsidian-digital-rain-background"
+  },
+  {
+    "id": "story-map",
+    "name": "Story Map",
+    "author": "prohui",
+    "description": "Plan user journeys with activities, tasks, stories, roles and milestones, link notes, and export to XMind. - This plugin has not been manually reviewed by Obsidian staff.",
+    "repo": "prohui/obsidian-story-map"
+  },
+  {
+    "id": "claudian-session-sync",
+    "name": "Claudian Session Sync",
+    "author": "powoct",
+    "description": "Sync the session files of Claudian-supported agent CLIs (Claude Code and friends) between machines so a conversation can be resumed elsewhere. - This plugin has not been manually reviewed by Obsidian staff.",
+    "repo": "powoct/claudian-session-sync"
+  },
+  {
+    "id": "checklist-status-icons",
+    "name": "Checklist Status Sets",
+    "author": "Dan",
+    "description": "Apply Status Sets' reusable status sets to checklist items inside your notes — per file, block, or heading — with the same traffic-light icons, colors, and Glow used in the file tree. - This plugin has not been manually reviewed by Obsidian staff.",
+    "repo": "danrfletcher/obsidian-checklist-status-icons"
+  },
+  {
+    "id": "eaglepack-importer",
+    "name": "EaglePack Importer",
+    "author": "Kerekes Stefan",
+    "description": "Import and display Eagle (eagle.cool) EaglePack exports — .eaglepack files and zipped Eagle libraries — in single or batch mode. Each item becomes a Markdown note with its image embedded plus an index/gallery note per pack. - This plugin has not been manually reviewed by Obsidian staff.",
+    "repo": "stef4678/eaglepack-importer"
+  },
+  {
+    "id": "ycs-reading-dashboard",
+    "name": "Baixiao Reading Cockpit",
+    "author": "Yincs",
+    "description": "管理阅读状态、推进阅读流程并沉淀知识。 - This plugin has not been manually reviewed by Obsidian staff.",
+    "repo": "csuyincs-creator/Baixiao-Reading-Cockpit"
+  },
+  {
+    "id": "kumoo-calendar",
+    "name": "Kumoo Calendar",
+    "author": "KuMoo",
+    "description": "日历视图：阳历/农历、黄历宜忌与12时辰吉凶、全库文件活动时间线。Calendar with lunar dates, almanac luck hours, and file activity timeline. - This plugin has not been manually reviewed by Obsidian staff.",
+    "repo": "kumoonet/obsidian-kumoo-calendar"
+  },
+  {
+    "id": "folder-spaces",
+    "name": "Folder Spaces",
+    "author": "Edward Hsieh",
+    "description": "Create folder-scoped File Explorer spaces in sidebars, editor tabs, and popout windows. - This plugin has not been manually reviewed by Obsidian staff.",
+    "repo": "edwardsayer/obsidian-folder-spaces"
+  },
+  {
+    "id": "integrated-task-manager",
+    "name": "Integrated Task Manager",
+    "author": "kuberrr05",
+    "description": "Markdown-native Inbox, Today, Upcoming, All Tasks, and Projects views. - This plugin has not been manually reviewed by Obsidian staff.",
+    "repo": "kuberrr0/obsidian-integrated-tasks"
+  },
+  {
+    "id": "hash-pasted-image-plus",
+    "name": "Hash Pasted Image Plus",
+    "author": "xzhi",
+    "description": "中文:通过哈希算法自动重命名粘贴到仓库中的图片；Hash Pasted Image 加强版，新增忽略指定目录、中英文界面、目录模糊选择等功能。 | EN:Auto rename pasted images added to the vault via hash algorithm; Enhanced version of Hash Pasted Image with ignored directories, bilingual UI, and fuzzy folder selection. - This plugin has not been manually reviewed by Obsidian staff.",
+    "repo": "github-xzhi/obsidian-hash-pasted-image-plus"
+  },
+  {
+    "id": "easy-paste-table",
+    "name": "Paste Table",
+    "author": "jyqqs",
+    "description": "把 AI 对话（豆包/DeepSeek 等）复制的 Tab/空格纯文本一键转成标准 Markdown 表格，支持可选的数字排序列 - This plugin has not been manually reviewed by Obsidian staff.",
+    "repo": "spiderk-104/paste-table"
+  },
+  {
+    "id": "nutegg",
+    "name": "NutEgg",
+    "author": "staff-000",
+    "description": "Read less, hatch more. Capture web content, curate your knowledge base in Obsidian - This plugin has not been manually reviewed by Obsidian staff.",
+    "repo": "staff-000/nutegg-obsidian-release"
+  },
+  {
+    "id": "custom-folder-links",
+    "name": "Custom Folder Links",
+    "author": "Ian Hays",
+    "description": "Enables wikilinks pointing to folders, with custom settings to control how those links appear in the editor and what happens when one is clicked. - This plugin has not been manually reviewed by Obsidian staff.",
+    "repo": "ianhays/obsidian-custom-folder-links"
+  },
+  {
+    "id": "typesetter",
+    "name": "Typesetter",
+    "author": "CHEN Hua",
+    "description": "Render publication-quality typography in prose without changing Markdown source, with syntax-aware protection for technical content. - This plugin has not been manually reviewed by Obsidian staff.",
+    "repo": "ichenh/obsidian-typesetter"
+  },
+  {
+    "id": "html-studio",
+    "name": "HTML Studio",
+    "author": "pherehouse",
+    "description": "Read, view and visually edit HTML files in Obsidian — slide decks, long pages and more. Based on obsidian-html-plugin by Nuthrash. - This plugin has not been manually reviewed by Obsidian staff.",
+    "repo": "pherehouse/obsidian-html-studio"
+  },
+  {
+    "id": "summary-only",
+    "name": "SummaryOnly",
+    "author": "Tyler Carrol",
+    "description": "Base view that shows summaries only. - This plugin has not been manually reviewed by Obsidian staff.",
+    "repo": "tylercarrol/obsidian-summary-only"
+  },
+  {
+    "id": "super-smart-random-note",
+    "name": "Super Smart Random Note",
+    "author": "zakin",
+    "description": "Open random notes matched by saved filters written in Obsidian's search query syntax. - This plugin has not been manually reviewed by Obsidian staff.",
+    "repo": "isaquepereira/obsidian-super-smart-random-note"
+  },
+  {
+    "id": "task-cascade",
+    "name": "Task Cascade",
+    "author": "nikvoronin",
+    "description": "Keeps parent checkboxes in sync with their children's status using configurable rules. - This plugin has not been manually reviewed by Obsidian staff.",
+    "repo": "nikvoronin/task-cascade"
+  },
+  {
+    "id": "anki-markdown-sync",
+    "name": "Anki Markdown Sync",
+    "author": "justinnnnn-045",
+    "description": "Two-way sync between your markdown vault and Anki via AnkiConnect. Write ````anki` blocks, sync to Anki, edit in Anki, sync back. Conflict-safe. - This plugin has not been manually reviewed by Obsidian staff.",
+    "repo": "justinnnnnnn045/anki-markdown-sync"
+  },
+  {
+    "id": "emberly-maps",
+    "name": "Emberly Maps",
+    "author": "seagnu",
+    "description": "Open Markdown notes as visual Emberly-style mind maps. - This plugin has not been manually reviewed by Obsidian staff.",
+    "repo": "ginaofthesea/emberly-obsidian-plugin"
+  },
+  {
+    "id": "featherweight-local-wallpaper",
+    "name": "Featherweight Local Wallpaper",
+    "author": "Theo Tatsuyama",
+    "description": "Minimal, zero-overhead background wallpaper plugin supporting local vault files and remote URLs via CSS variables. - This plugin has not been manually reviewed by Obsidian staff.",
+    "repo": "midorinohoshi/featherweight-local-wallpaper"
+  },
+  {
+    "id": "detailsearch-linker",
+    "name": "DetailSearch Linker",
+    "author": "zoupuyo",
+    "description": "Search other note bodies on demand for a selected term, highlight it in the current note, and insert heading links in Obsidian's configured internal-link format. - This plugin has not been manually reviewed by Obsidian staff.",
+    "repo": "zoupuyo-obsidian/obsidian-detailsearch-linker"
+  },
+  {
+    "id": "canvas-sync-bridge",
+    "name": "Canvas Sync Bridge",
+    "author": "Joshua Aaron Wortz",
+    "description": "Receives Canvas data from a browser extension and syncs it into your vault. - This plugin has not been manually reviewed by Obsidian staff.",
+    "repo": "sixfivemil/obsidian-canvas-sync"
+  },
+  {
+    "id": "folder-templates",
+    "name": "Folder Templates",
+    "author": "imbalet",
+    "description": "Automatically apply templates to notes based on their paths. - This plugin has not been manually reviewed by Obsidian staff.",
+    "repo": "imbalet/folder-templates"
+  },
+  {
+    "id": "folder-tags",
+    "name": "Folder Tags",
+    "author": "imbalet",
+    "description": "Automatically apply tags to notes based on their paths. - This plugin has not been manually reviewed by Obsidian staff.",
+    "repo": "imbalet/folder-tags"
+  },
+  {
+    "id": "constella",
+    "name": "Constella",
+    "author": "loopman90",
+    "description": "Turn your Obsidian vault graph into a living, configurable knowledge visualization. - This plugin has not been manually reviewed by Obsidian staff.",
+    "repo": "loopman90/constella-obsidian-plugin"
+  },
+  {
+    "id": "fsview",
+    "name": "File System View",
+    "author": "zakin",
+    "description": "Browse and query your local file system as an interactive, collapsible tree inside any note. - This plugin has not been manually reviewed by Obsidian staff.",
+    "repo": "isaquepereira/obsidian-fsview"
+  },
+  {
+    "id": "apple-reminders-plus",
+    "name": "Apple Reminders Plus",
+    "author": "zakin",
+    "description": "View and manage Apple Reminders from a sidebar panel. macOS only. - This plugin has not been manually reviewed by Obsidian staff.",
+    "repo": "isaquepereira/obsidian-apple-reminders-plus"
+  },
+  {
+    "id": "mindmap-studio",
+    "name": "MindMap Studio",
+    "author": "冬季蚊子",
+    "description": "Mind map rendering for Markdown: edit .mindmap.md as a mind map, with Markdown outline round-trip, native wikilinks and images, layouts, search, auto-arrange and PNG export. - This plugin has not been manually reviewed by Obsidian staff.",
+    "repo": "wintermosquito/Obsidian-Mindmap-Studio"
+  },
+  {
+    "id": "cn-natsort",
+    "name": "CN Natural Sort",
+    "author": "琉璃幻影",
+    "description": "让文件浏览器按「第一章 / 第二章 / 第十章」的中文数字自然排序。不改文件名、不改内容、零配置，直接接管 Obsidian 自身的排序逻辑。 - This plugin has not been manually reviewed by Obsidian staff.",
+    "repo": "liu-li-huan-ying/obsidian-cn-natsort"
+  },
+  {
+    "id": "github-vault-relay",
+    "name": "GitHub Vault Relay",
+    "author": "Nguyễn An Khang",
+    "description": "A conservative GitHub bridge for Obsidian Mobile - without running Git on the phone. - This plugin has not been manually reviewed by Obsidian staff.",
+    "repo": "ankhang0704/github-vault-relay"
+  },
+  {
+    "id": "excel-lite",
+    "name": "Excel Lite",
+    "author": "nightfall",
+    "description": "Free Excel-like spreadsheet plugin for Obsidian with xlsx import/export, based on Univer. - This plugin has not been manually reviewed by Obsidian staff.",
+    "repo": "nightfall-yl/obsidian-excel-lite"
+  },
+  {
+    "id": "menu-hider",
+    "name": "Menu Hider",
+    "author": "IcyCat",
+    "description": "Hide, reorder and promote context menu entries, and copy absolute file paths from the file explorer. - This plugin has not been manually reviewed by Obsidian staff.",
+    "repo": "icy-cat/obsidian-menu-hider"
+  },
+  {
+    "id": "quiet-tree",
+    "name": "Quiet Tree",
+    "author": "elfmedy",
+    "description": "Arrange the native file explorer with deliberate dragging, clear tree drop targets, and editable JSON ordering. - This plugin has not been manually reviewed by Obsidian staff.",
+    "repo": "elfmedy/quiet-tree"
+  },
+  {
+    "id": "pi-ide-context",
+    "name": "pi-ide-context",
+    "author": "Andy Luo",
+    "description": "Share the open note, cursor and selection in your vault with pi (npm pi-ide-context). - This plugin has not been manually reviewed by Obsidian staff.",
+    "repo": "andy8647/pi-ide-context"
+  },
+  {
+    "id": "quick-voice-note",
+    "name": "Quick Voice Note",
+    "author": "Spencer Clark",
+    "description": "Press a button, talk as long as you like, read it in tonight's note. Long voice memos saved to your vault and transcribed to text. - This plugin has not been manually reviewed by Obsidian staff.",
+    "repo": "spencer1975/quick-voice-note"
+  },
+  {
+    "id": "tap-toggle-task",
+    "name": "TaskTap",
+    "author": "rel1nce",
+    "description": "Toggle tasks by tapping their text on mobile. Tap after the text in editing view to place the cursor. - This plugin has not been manually reviewed by Obsidian staff.",
+    "repo": "rprudchenko/obsidian-tasktap"
+  },
+  {
+    "id": "stay-folded",
+    "name": "Stay Folded",
+    "author": "crayonzgrim",
+    "description": "Keep folded sections collapsed until you explicitly expand them. - This plugin has not been manually reviewed by Obsidian staff.",
+    "repo": "crayonzgrim/stay-folded"
+  },
+  {
+    "id": "media-recorder",
+    "name": "Media Recorder",
+    "author": "Jackshell",
+    "description": "A dockable media recorder for capturing webcam, screen, and audio directly into your notes. - This plugin has not been manually reviewed by Obsidian staff.",
+    "repo": "alaxanalax10/obsidian-media-journal"
+  },
+  {
+    "id": "maic-for-office",
+    "name": "Office Attachment Viewer",
+    "author": "李骥远",
+    "description": "Preview Word (.docx), PowerPoint (.pptx) and Excel (.xlsx) attachments right inside Obsidian. Fully local, read-only. - This plugin has not been manually reviewed by Obsidian staff.",
+    "repo": "aqu-lab/maic-for-office"
+  },
+  {
+    "id": "auto-move-file",
+    "name": "Auto Move File",
+    "author": "sx kan",
+    "description": "Automatically move or copy notes to target folders based on frontmatter properties or file names, with flexible rules and exact or fuzzy matching. - This plugin has not been manually reviewed by Obsidian staff.",
+    "repo": "lsywk25/auto-move-file"
+  },
+  {
+    "id": "lumaframe",
+    "name": "LumaFrame",
+    "author": "loopman90",
+    "description": "Turn photos, GIFs and videos into a customizable ambient gallery and digital photo frame inside Obsidian. - This plugin has not been manually reviewed by Obsidian staff.",
+    "repo": "loopman90/LumaFrame"
+  },
+  {
+    "id": "any-table-sort",
+    "name": "Any Table Sort",
+    "author": "DrShajul",
+    "description": "Sort any type of obsidian table, including dataview rendered. - This plugin has not been manually reviewed by Obsidian staff.",
+    "repo": "drshajul/obsidian-any-table-sort"
+  },
+  {
+    "id": "regen",
+    "name": "Regen",
+    "author": "loopman90",
+    "description": "A local, gamified work-rhythm HUD for Obsidian: work, recover, continue. - This plugin has not been manually reviewed by Obsidian staff.",
+    "repo": "loopman90/regen"
+  },
+  {
+    "id": "sidecar-ai",
+    "name": "Sidecar AI",
+    "author": "Andrey Eremin",
+    "description": "Native AI chat sidebar supporting Google Antigravity, GitHub Copilot, and local AI CLI providers with zero API tokens needed. - This plugin has not been manually reviewed by Obsidian staff.",
+    "repo": "developer88/obsidian-ai-chat-extension"
+  },
+  {
+    "id": "anbing-image-upload",
+    "name": "anbing-image-upload",
+    "author": "anbing cui",
+    "description": "Upload images to S3-compatible storage - This plugin has not been manually reviewed by Obsidian staff.",
+    "repo": "cuianbing/obsidian-image-upload"
+  },
+  {
+    "id": "bili-card",
+    "name": "Bili Card",
+    "author": "DaoWang",
+    "description": "Renders div.bili-card / div.bili-up-card one-liners as Bilibili video & UP-owner card galleries. Data lives in data-* attributes; template, styles and layout settings live here. - This plugin has not been manually reviewed by Obsidian staff.",
+    "repo": "dao1023/bili-card"
+  },
+  {
+    "id": "letterboxd-sync",
+    "name": "Letterboxd Sync",
+    "author": "Wren",
+    "description": "Sync Letterboxd RSS watches into one Obsidian note per movie. - This plugin has not been manually reviewed by Obsidian staff.",
+    "repo": "turnipsforme/letterboxd-sync"
+  },
+  {
+    "id": "highlightextractor",
+    "name": "Highlight-Extractor",
+    "author": "KfirG",
+    "description": "Extract highlights and bold from different notes into a single note - This plugin has not been manually reviewed by Obsidian staff.",
+    "repo": "kfirgumay2005-hash/Highlight-Extractor"
+  },
+  {
+    "id": "mistake-notebook",
+    "name": "Mistake Notebook",
+    "author": "Adobiz",
+    "description": "错题本（Mistake notebook）: mask answers (blur/white/mosaic/black), click to reveal, auto-split long answers to a linked page, insert at cursor, question emphasis, minimal mode. Plain Markdown, no lock-in. - This plugin has not been manually reviewed by Obsidian staff.",
+    "repo": "adobiz/obsidian-mistake-notebook"
+  },
+  {
+    "id": "baidu-ai-notes",
+    "name": "Netdisk AI Notes Importer",
+    "author": "hyq",
+    "description": "将百度网盘 AI 视频笔记导入 Obsidian，支持批量导入、原视频时间戳跳转与本地同步。 - This plugin has not been manually reviewed by Obsidian staff.",
+    "repo": "hyq2890-blip/netdisk-ai-notes-importer"
+  },
+  {
+    "id": "chronobars",
+    "name": "Chronobars",
+    "author": "Daniel Hidefjäll",
+    "description": "Create time-based progress bars. - This plugin has not been manually reviewed by Obsidian staff.",
+    "repo": "dojje/chronobars"
+  },
+  {
+    "id": "sheetsmith",
+    "name": "Sheetsmith",
+    "author": "richie735",
+    "description": "Design and use character sheets for any tabletop RPG. Build a layout on a grid, define your own formulas, and keep every character as a plain markdown note. - This plugin has not been manually reviewed by Obsidian staff.",
+    "repo": "richie735/obsidian-sheetsmith"
+  },
+  {
+    "id": "ruune-sync",
+    "name": "Ruune Sync",
+    "author": "Joe",
+    "description": "Automatically sync your Ruune notes, summaries, and transcripts into your Obsidian vault. - This plugin has not been manually reviewed by Obsidian staff.",
+    "repo": "internet-of-humans/ruune-obsidian-plugin"
+  },
+  {
+    "id": "oncemarked",
+    "name": "OnceMarked",
+    "author": "Chuang Niu",
+    "description": "Publish notes and linked articles to your OnceMarked blog. - This plugin has not been manually reviewed by Obsidian staff.",
+    "repo": "ovspianist/oncemarked-obsidian"
+  },
+  {
+    "id": "my-tasks",
+    "name": "My Tasks",
+    "author": "sa1fer",
+    "description": "Task tracker with Kanban, Calendar and Tree views - This plugin has not been manually reviewed by Obsidian staff.",
+    "repo": "sa1f3r/MyTasks"
+  },
+  {
+    "id": "git-graph",
+    "name": "Git Graph",
+    "author": "Luis Mendez",
+    "description": "VS Code's source control graph as a side pane: lanes, refs, and commit details for the vault's git repository. - This plugin has not been manually reviewed by Obsidian staff.",
+    "repo": "luis85/obsidian-git-graph"
+  },
+  {
+    "id": "icor-for-life-outliner",
+    "name": "ICOR for Life - Outliner",
+    "author": "Thomas Roedl",
+    "description": "Lists that behave like an outline: indent, outdent and move a bullet together with everything under it, Enter that knows about children, a cursor that stays out of the bullet, and a select-all that climbs. Part of the ICOR for Life suite. - This plugin has not been manually reviewed by Obsidian staff.",
+    "repo": "myicor/icor-for-life-outliner"
+  },
+  {
+    "id": "caption-gallery-slider",
+    "name": "Caption Gallery Slider",
+    "author": "Pauline Skrypnik",
+    "description": "A native-feeling gallery slider for local images and videos with editable Markdown captions. - This plugin has not been manually reviewed by Obsidian staff.",
+    "repo": "skrpln/caption-gallery-slider"
+  },
+  {
+    "id": "googly-eyes",
+    "name": "GooglyEyes",
+    "author": "loopman90",
+    "description": "Put living googly eyes in Obsidian. - This plugin has not been manually reviewed by Obsidian staff.",
+    "repo": "loopman90/GooglyEyes"
+  },
+  {
+    "id": "tabcandy",
+    "name": "Tab Candy",
+    "author": "LVNACY Notes",
+    "description": "Creates a customizable new tab view with backgrounds, quotes, search, and more. - This plugin has not been manually reviewed by Obsidian staff.",
+    "repo": "lvnacy-notes/tabcandy"
+  },
+  {
+    "id": "kambas",
+    "name": "Kambas",
+    "author": "emarpiee",
+    "description": "Extend core plugin Canvas with PureRef-like image controls, inline Base64 embedding, and adjustable navigations. - This plugin has not been manually reviewed by Obsidian staff.",
+    "repo": "emarpiee/obsidian-kambas"
+  },
+  {
+    "id": "rcrypt",
+    "name": "RCrypt",
+    "author": "emarpiee",
+    "description": "Client-side file and folder encryption plugin, 100% compatible with Rclone Crypt. - This plugin has not been manually reviewed by Obsidian staff.",
+    "repo": "emarpiee/obsidian-rcrypt"
+  },
+  {
+    "id": "personal-workbench",
+    "name": "Personal Workbench",
+    "author": "gmsz-1603",
+    "description": "个人工作台（独立视图页签）：顶部统计横幅、查询栏、天气+农历+每日一签、农历万年历（节气/节日/生日/任务）、年度进度、今日任务、生日提醒；左右栏独立滚动。 - This plugin has not been manually reviewed by Obsidian staff.",
+    "repo": "gmsz-1603/obsidian-personal-workbench"
+  },
+  {
+    "id": "export-ics-schedule",
+    "name": "Export ICS Schedule",
+    "author": "lindongyan",
+    "description": "Export Obsidian - [ ] tasks to a .ics calendar file and open it with the system calendar. - This plugin has not been manually reviewed by Obsidian staff.",
+    "repo": "lindongyan1992/export-ics-schedule"
+  },
+  {
+    "id": "geogebra",
+    "name": "GeoGebra",
+    "author": "vanabel",
+    "description": "Drag .ggb files into notes and interact with GeoGebra constructions inline. - This plugin has not been manually reviewed by Obsidian staff.",
+    "repo": "vanabel/obsidian-geogebra"
+  },
+  {
+    "id": "qiaomu-ai-rss",
+    "name": "Qiaomu AI RSS",
+    "author": "向阳乔木",
+    "description": "Read Qiaomu and personal RSS feeds, discover independent blogs, and add article links to Daily Notes. - This plugin has not been manually reviewed by Obsidian staff.",
+    "repo": "joeseesun/qiaomu-ai-rss"
+  },
+  {
+    "id": "latex-inline-block-toggle",
+    "name": "LaTeX Inline Block Toggle",
+    "author": "frank-smith",
+    "description": "Toggle LaTeX math between inline and display blocks, and merge consecutive block formulas. - This plugin has not been manually reviewed by Obsidian staff.",
+    "repo": "jm-frank/Obisian-Latex-inline-block-toggle"
+  },
+  {
+    "id": "gagans-rollover-todos",
+    "name": "Rollover Todos (Gagans)",
+    "author": "Gagans",
+    "description": "Roll over unfinished todos and pinned links, paginate adjacent daily notes, track routine streaks by id, and collect today's edited note links. - This plugin has not been manually reviewed by Obsidian staff.",
+    "repo": "lacall-gagans-studio/gagans-rollover-todos"
+  },
+  {
+    "id": "gagans-routine-heatmap",
+    "name": "Routine Heatmap (Gagans)",
+    "author": "Gagans",
+    "description": "Paint a yearly heatmap from completed id-tagged routine tasks in daily notes. - This plugin has not been manually reviewed by Obsidian staff.",
+    "repo": "lacall-gagans-studio/gagans-routine-heatmap"
+  },
+  {
+    "id": "claude-usage",
+    "name": "Claude Usage",
+    "author": "Alexander Herrmann",
+    "description": "Shows your Claude subscription usage (5-hour and weekly windows) in the status bar. - This plugin has not been manually reviewed by Obsidian staff.",
+    "repo": "eightk1ll/obsidian-claude-usage"
+  },
+  {
+    "id": "agentnote",
+    "name": "agentNote",
+    "author": "Xinxin",
+    "description": "Share local notes and files with AI agents through a private HTTP service. - This plugin has not been manually reviewed by Obsidian staff.",
+    "repo": "xinxinrana/agentNote-Obsidian-"
+  },
+  {
+    "id": "copy-with-footnotes",
+    "name": "Copy with Footnotes",
+    "author": "Systina12",
+    "description": "Copy selected Markdown together with its referenced footnote definitions. - This plugin has not been manually reviewed by Obsidian staff.",
+    "repo": "systina12/copy_with_footnotes"
+  },
+  {
+    "id": "content-studio",
+    "name": "Mogao Content Studio",
+    "author": "builtbyxm",
+    "description": "Format notes for WeChat, Zhihu, Xiaohongshu and X with reusable templates, embedded images and article style learning. - This plugin has not been manually reviewed by Obsidian staff.",
+    "repo": "ai-scarlett/obsidian-content-studio"
+  },
+  {
+    "id": "icor-for-life-canvases",
+    "name": "ICOR for Life - Canvases",
+    "author": "Thomas Roedl",
+    "description": "Draw on a canvas with ink saved in the file, tools to select, pan, draw and erase, shapes and colours for text cards, canvases inside canvases, and under every note the canvases it is on and what it connects to. Part of the ICOR for Life suite. - This plugin has not been manually reviewed by Obsidian staff.",
+    "repo": "myicor/icor-for-life-canvases"
+  },
+  {
+    "id": "icor-for-life-pdf-annotation",
+    "name": "ICOR for Life - PDF Annotation",
+    "author": "Thomas Roedl",
+    "description": "Highlight text or draw a box on a PDF and get a note in the vault for it, with a deep link back, a card on any canvas by drag and drop, and a sidebar of every highlight in the open PDF. Part of the ICOR for Life suite. - This plugin has not been manually reviewed by Obsidian staff.",
+    "repo": "myicor/icor-for-life-pdf-annotation"
   }
 ]
